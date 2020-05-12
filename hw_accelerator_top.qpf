@@ -1,0 +1,6 @@
+DATE = "13:54:13 May 11, 2020"
+QUARTUS_VERSION = "15.1.0"
+
+# Revisions
+
+PROJECT_REVISION = "hw_accelerator_top"

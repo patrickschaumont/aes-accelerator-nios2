@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="127" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library expandedCategories="Library/Interface Protocols,Library,Project" />
+ <window width="1324" height="1077" x="-1627" y="197" />
+ <generation simulation="VERILOG" path="_PROJECT_NAME_" testbench_system="SIMPLE" />
+</preferences>
