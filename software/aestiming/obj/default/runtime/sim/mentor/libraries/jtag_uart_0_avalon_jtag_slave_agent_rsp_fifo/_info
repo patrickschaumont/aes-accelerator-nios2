@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/cygwin64/home/pschaumont/aes-accelerator-nios2/software/aestiming/obj/default/runtime/sim/mentor
+valtera_avalon_sc_fifo
+!s110 1589337355
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+IP8`4Th1`lob3V6GN>l;n<1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1589334907
+8C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v
+FC:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1589337355.000000
+!s107 C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v|-work|jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|
+!i113 1
+o-work jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo
+tCvgOpt 0

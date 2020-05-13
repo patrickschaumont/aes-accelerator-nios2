@@ -11,6 +11,7 @@ module softcore_top_tb (
 
 	softcore_top softcore_top_inst (
 		.clk_clk       (softcore_top_inst_clk_bfm_clk_clk),       //   clk.clk
+		.pio_export    (),                                        //   pio.export
 		.reset_reset_n (softcore_top_inst_reset_bfm_reset_reset)  // reset.reset_n
 	);
 

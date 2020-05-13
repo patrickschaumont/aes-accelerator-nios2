@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2020.05.12.20:16:27
+# ACDS 18.1 625 win32 2020.05.12.21:55:08
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2020.05.12.20:16:27
+# ACDS 18.1 625 win32 2020.05.12.21:55:08
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="softcore_top_tb"
@@ -158,12 +158,18 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/verbosity_pkg.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_avalon_st_adapter.v \
-  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_mux.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_mux_001.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_mux.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_demux_004.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_demux.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_mux_004.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_mux.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_demux_001.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_demux.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_006.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_002.sv \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_001.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router.sv \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_slave_agent.sv \
@@ -195,6 +201,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxe3.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxe4.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxtop.v \
+  $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_pio_0.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_onchip_memory2_0.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_nios2_gen2_0.v \
   $QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_jtag_uart_0.v \

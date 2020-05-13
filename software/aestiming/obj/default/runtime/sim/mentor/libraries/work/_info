@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/cygwin64/home/pschaumont/aes-accelerator-nios2/software/aestiming/obj/default/runtime/sim/mentor
+vsoftcore_top_tb
+!s110 1589337358
+!i10b 1
+!s100 g`:k`MZ<KhVgI]5XnVMk51
+InDH:4Ff;CdQR>4;[Y:>mB0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1589334896
+8C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/softcore_top_tb.v
+FC:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/softcore_top_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1589337358.000000
+!s107 C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/softcore_top_tb.v|
+!s90 -reportprogress|300|C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/softcore_top_tb.v|
+!i113 1
+tCvgOpt 0

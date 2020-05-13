@@ -1,0 +1,29 @@
+
+State Machine - |hw_accelerator_top|softcore_top:u0|tboxtop:tboxtop_0|state
+Name state.sdeclast3 state.sdeclast2 state.sdeclast1 state.senclast4 state.senclast3 state.senclast2 state.senclast1 state.sdec4 state.sdec3 state.sdec2 state.sdec1 state.senc4 state.senc3 state.senc2 state.senc1 state.sdecode state.sdeclast4 
+state.sdecode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.senc1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+state.senc2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+state.senc3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+state.senc4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+state.sdec1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+state.sdec2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+state.sdec3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+state.sdec4 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+state.senclast1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+state.senclast2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+state.senclast3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+state.senclast4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.sdeclast1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.sdeclast2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.sdeclast3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.sdeclast4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+
+State Machine - |hw_accelerator_top|softcore_top:u0|softcore_top_nios2_gen2_0:nios2_gen2_0|softcore_top_nios2_gen2_0_cpu:cpu|softcore_top_nios2_gen2_0_cpu_nios2_oci:the_softcore_top_nios2_gen2_0_cpu_nios2_oci|softcore_top_nios2_gen2_0_cpu_debug_slave_wrapper:the_softcore_top_nios2_gen2_0_cpu_debug_slave_wrapper|softcore_top_nios2_gen2_0_cpu_debug_slave_tck:the_softcore_top_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2020.05.12.20:16:27
+# ACDS 18.1 625 win32 2020.05.12.21:55:08
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2020.05.12.20:16:27
+# ACDS 18.1 625 win32 2020.05.12.21:55:08
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="softcore_top_tb"
@@ -149,11 +149,17 @@ mkdir -p ./libraries/work/
 mkdir -p ./libraries/altera_common_sv_packages/
 mkdir -p ./libraries/error_adapter_0/
 mkdir -p ./libraries/avalon_st_adapter/
+mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
+mkdir -p ./libraries/rsp_demux_004/
 mkdir -p ./libraries/rsp_demux/
+mkdir -p ./libraries/cmd_mux_004/
 mkdir -p ./libraries/cmd_mux/
+mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
+mkdir -p ./libraries/router_006/
 mkdir -p ./libraries/router_002/
+mkdir -p ./libraries/router_001/
 mkdir -p ./libraries/router/
 mkdir -p ./libraries/jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo/
 mkdir -p ./libraries/jtag_uart_0_avalon_jtag_slave_agent/
@@ -169,6 +175,7 @@ mkdir -p ./libraries/nios2_gen2_0_custom_instruction_master_multi_xconnect/
 mkdir -p ./libraries/nios2_gen2_0_custom_instruction_master_translator/
 mkdir -p ./libraries/timer_0/
 mkdir -p ./libraries/tboxtop_0/
+mkdir -p ./libraries/pio_0/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
@@ -222,13 +229,21 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/verbosity_pkg.sv"                                                      -work altera_common_sv_packages                                      -cdslib ./cds_libs/altera_common_sv_packages.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"   -work error_adapter_0                                                -cdslib ./cds_libs/error_adapter_0.cds.lib                                               
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_avalon_st_adapter.v"                    -work avalon_st_adapter                                              -cdslib ./cds_libs/avalon_st_adapter.cds.lib                                             
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_mux_001.sv"                         -work rsp_mux_001                                                    -cdslib ./cds_libs/rsp_mux_001.cds.lib                                                   
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                           -work rsp_mux_001                                                    -cdslib ./cds_libs/rsp_mux_001.cds.lib                                                   
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_mux.sv"                             -work rsp_mux                                                        -cdslib ./cds_libs/rsp_mux.cds.lib                                                       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                           -work rsp_mux                                                        -cdslib ./cds_libs/rsp_mux.cds.lib                                                       
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_demux_004.sv"                       -work rsp_demux_004                                                  -cdslib ./cds_libs/rsp_demux_004.cds.lib                                                 
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_rsp_demux.sv"                           -work rsp_demux                                                      -cdslib ./cds_libs/rsp_demux.cds.lib                                                     
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_mux_004.sv"                         -work cmd_mux_004                                                    -cdslib ./cds_libs/cmd_mux_004.cds.lib                                                   
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                           -work cmd_mux_004                                                    -cdslib ./cds_libs/cmd_mux_004.cds.lib                                                   
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_mux.sv"                             -work cmd_mux                                                        -cdslib ./cds_libs/cmd_mux.cds.lib                                                       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv"                                           -work cmd_mux                                                        -cdslib ./cds_libs/cmd_mux.cds.lib                                                       
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_demux_001.sv"                       -work cmd_demux_001                                                  -cdslib ./cds_libs/cmd_demux_001.cds.lib                                                 
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_cmd_demux.sv"                           -work cmd_demux                                                      -cdslib ./cds_libs/cmd_demux.cds.lib                                                     
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_006.sv"                          -work router_006                                                     -cdslib ./cds_libs/router_006.cds.lib                                                    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_002.sv"                          -work router_002                                                     -cdslib ./cds_libs/router_002.cds.lib                                                    
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router_001.sv"                          -work router_001                                                     -cdslib ./cds_libs/router_001.cds.lib                                                    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_mm_interconnect_0_router.sv"                              -work router                                                         -cdslib ./cds_libs/router.cds.lib                                                        
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_avalon_sc_fifo.v"                                               -work jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo                   -cdslib ./cds_libs/jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo.cds.lib                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/altera_merlin_slave_agent.sv"                                          -work jtag_uart_0_avalon_jtag_slave_agent                            -cdslib ./cds_libs/jtag_uart_0_avalon_jtag_slave_agent.cds.lib                           
@@ -260,6 +275,7 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxe3.v"                                                              -work tboxtop_0                                                      -cdslib ./cds_libs/tboxtop_0.cds.lib                                                     
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxe4.v"                                                              -work tboxtop_0                                                      -cdslib ./cds_libs/tboxtop_0.cds.lib                                                     
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/tboxtop.v"                                                             -work tboxtop_0                                                      -cdslib ./cds_libs/tboxtop_0.cds.lib                                                     
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_pio_0.v"                                                  -work pio_0                                                          -cdslib ./cds_libs/pio_0.cds.lib                                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_onchip_memory2_0.v"                                       -work onchip_memory2_0                                               -cdslib ./cds_libs/onchip_memory2_0.cds.lib                                              
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_nios2_gen2_0.v"                                           -work nios2_gen2_0                                                   -cdslib ./cds_libs/nios2_gen2_0.cds.lib                                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/softcore_top_tb/simulation/submodules/softcore_top_jtag_uart_0.v"                                            -work jtag_uart_0                                                    -cdslib ./cds_libs/jtag_uart_0.cds.lib                                                   

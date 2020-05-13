@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/cygwin64/home/pschaumont/aes-accelerator-nios2/software/aestiming/obj/default/runtime/sim/mentor
+valtera_customins_master_translator
+!s110 1589337357
+!i10b 1
+!s100 iAjRYXBhGZ_FfnYD?k0U83
+INW8?6GERccB:`>fTRjWOm0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1589334900
+8C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_customins_master_translator.v
+FC:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_customins_master_translator.v
+L0 23
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1589337357.000000
+!s107 C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_customins_master_translator.v|
+!s90 -reportprogress|300|C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_customins_master_translator.v|-work|nios2_gen2_0_custom_instruction_master_translator|
+!i113 1
+o-work nios2_gen2_0_custom_instruction_master_translator
+tCvgOpt 0

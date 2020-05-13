@@ -1,0 +1,5599 @@
+
+aestiming.elf:     file format elf32-littlenios2
+aestiming.elf
+architecture: nios2:r1, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00010020
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00010000 paddr 0x00010000 align 2**12
+         filesz 0x00000020 memsz 0x00000020 flags r-x
+    LOAD off    0x00001020 vaddr 0x00010020 paddr 0x00010020 align 2**12
+         filesz 0x0000469c memsz 0x0000469c flags r-x
+    LOAD off    0x000056bc vaddr 0x000146bc paddr 0x000146c0 align 2**12
+         filesz 0x00000004 memsz 0x00000004 flags rw-
+    LOAD off    0x000056c4 vaddr 0x000146c4 paddr 0x000146c4 align 2**12
+         filesz 0x00000000 memsz 0x00000014 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .entry        00000020  00010000  00010000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .exceptions   00000000  00010020  00010020  000056c0  2**0
+                  CONTENTS
+  2 .text         00001e54  00010020  00010020  00001020  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       00002848  00011e74  00011e74  00002e74  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rwdata       00000004  000146bc  000146c0  000056bc  2**2
+                  CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
+  5 .bss          00000014  000146c4  000146c4  000056c4  2**2
+                  ALLOC, SMALL_DATA
+  6 .onchip_memory2_0 00000000  000146d8  000146d8  000056c0  2**0
+                  CONTENTS
+  7 .comment      00000023  00000000  00000000  000056c0  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 00000168  00000000  00000000  000056e8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   00001313  00000000  00000000  00005850  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 000007e7  00000000  00000000  00006b63  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   00000cc3  00000000  00000000  0000734a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  00000274  00000000  00000000  00008010  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    000006a4  00000000  00000000  00008284  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    0000115d  00000000  00000000  00008928  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  00009a88  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_ranges 00000090  00000000  00000000  00009a98  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .thread_model 00000003  00000000  00000000  0000aa3e  2**0
+                  CONTENTS, READONLY
+ 18 .cpu          0000000c  00000000  00000000  0000aa41  2**0
+                  CONTENTS, READONLY
+ 19 .qsys         00000001  00000000  00000000  0000aa4d  2**0
+                  CONTENTS, READONLY
+ 20 .simulation_enabled 00000001  00000000  00000000  0000aa4e  2**0
+                  CONTENTS, READONLY
+ 21 .stderr_dev   0000000b  00000000  00000000  0000aa4f  2**0
+                  CONTENTS, READONLY
+ 22 .stdin_dev    0000000b  00000000  00000000  0000aa5a  2**0
+                  CONTENTS, READONLY
+ 23 .stdout_dev   0000000b  00000000  00000000  0000aa65  2**0
+                  CONTENTS, READONLY
+ 24 .sopc_system_name 0000000c  00000000  00000000  0000aa70  2**0
+                  CONTENTS, READONLY
+ 25 .quartus_project_dir 00000031  00000000  00000000  0000aa7c  2**0
+                  CONTENTS, READONLY
+ 26 .jdi          00005317  00000000  00000000  0000aaad  2**0
+                  CONTENTS, READONLY
+ 27 .sopcinfo     0003baae  00000000  00000000  0000fdc4  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00010000 l    d  .entry	00000000 .entry
+00010020 l    d  .exceptions	00000000 .exceptions
+00010020 l    d  .text	00000000 .text
+00011e74 l    d  .rodata	00000000 .rodata
+000146bc l    d  .rwdata	00000000 .rwdata
+000146c4 l    d  .bss	00000000 .bss
+000146d8 l    d  .onchip_memory2_0	00000000 .onchip_memory2_0
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 ../aestiming_bsp//obj/HAL/src/crt0.o
+00010058 l       .text	00000000 alt_after_alt_main
+00000000 l    df *ABS*	00000000 aes.c
+00011e74 l     O .rodata	00000028 rcon
+0001329c l     O .rodata	00000400 Te4
+00012e9c l     O .rodata	00000400 Td0
+0001229c l     O .rodata	00000400 Td3
+00012a9c l     O .rodata	00000400 Td1
+0001269c l     O .rodata	00000400 Td2
+0001429c l     O .rodata	00000400 Te0
+0001369c l     O .rodata	00000400 Te3
+00013e9c l     O .rodata	00000400 Te1
+00013a9c l     O .rodata	00000400 Te2
+00011e9c l     O .rodata	00000400 Td4
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 memcpy.c
+00000000 l    df *ABS*	00000000 alt_load.c
+00000000 l    df *ABS*	00000000 alt_main.c
+00000000 l    df *ABS*	00000000 alt_sys_init.c
+00000000 l    df *ABS*	00000000 altera_avalon_timer_vars.c
+00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
+00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
+00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
+00011dfc g     F .text	0000002c alt_main
+000146c0 g       *ABS*	00000000 __flash_rwdata_start
+00010688 g     F .text	00000388 AES_set_decrypt_key
+000146d0 g     O .bss	00000004 altera_avalon_timer_ts_freq
+00011890 g     F .text	000001c4 AES_encrypt_CI
+00011e6c g     F .text	00000008 altera_nios2_gen2_irq_init
+00010000 g     F .entry	0000000c __reset
+00010020 g       *ABS*	00000000 __flash_exceptions_start
+000146c8 g     O .bss	00000004 alt_argv
+0001c6bc g       *ABS*	00000000 _gp
+00011cf4 g     F .text	00000028 memcpy
+0001005c g     F .text	0000062c AES_set_encrypt_key
+00010000 g       *ABS*	00000000 __alt_mem_onchip_memory2_0
+00011a54 g     F .text	000001c4 AES_decrypt_CI
+000146d8 g       *ABS*	00000000 __bss_end
+00011e64 g     F .text	00000004 alt_dcache_flush_all
+000146c0 g       *ABS*	00000000 __ram_rwdata_end
+000146bc g       *ABS*	00000000 __ram_rodata_end
+000146bc g     O .rwdata	00000004 jtag_uart_0
+000146d8 g       *ABS*	00000000 end
+00020000 g       *ABS*	00000000 __alt_stack_pointer
+00010020 g     F .text	0000003c _start
+00011e48 g     F .text	0000001c alt_sys_init
+000146bc g       *ABS*	00000000 __ram_rwdata_start
+00011e74 g       *ABS*	00000000 __ram_rodata_start
+000146d8 g       *ABS*	00000000 __alt_stack_base
+000146c4 g       *ABS*	00000000 __bss_start
+00011c24 g     F .text	000000d0 main
+000146c4 g     O .bss	00000004 alt_envp
+00010a10 g     F .text	00000740 AES_encrypt
+00011e74 g       *ABS*	00000000 __flash_rodata_start
+00011e28 g     F .text	00000020 alt_irq_init
+000146cc g     O .bss	00000004 alt_argc
+000146d4 g     O .bss	00000004 altera_avalon_timer_ts_base
+00011c18 g     F .text	0000000c mark
+00010020 g       *ABS*	00000000 __ram_exceptions_start
+000146c0 g       *ABS*	00000000 _edata
+000146d8 g       *ABS*	00000000 _end
+00010020 g       *ABS*	00000000 __ram_exceptions_end
+00020000 g       *ABS*	00000000 __alt_data_end
+0001000c g       .entry	00000000 _exit
+00011e68 g     F .text	00000004 alt_icache_flush_all
+00011d1c g     F .text	000000e0 alt_load
+00011150 g     F .text	00000740 AES_decrypt
+
+
+
+Disassembly of section .entry:
+
+00010000 <__reset>:
+ * Jump to the _start entry point in the .text section if reset code
+ * is allowed or if optimizing for RTL simulation.
+ */
+#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
+    /* Jump to the _start entry point in the .text section. */
+    movhi r1, %hi(_start)
+   10000:	00400074 	movhi	at,1
+    ori r1, r1, %lo(_start)
+   10004:	08400814 	ori	at,at,32
+    jmp r1
+   10008:	0800683a 	jmp	at
+
+0001000c <_exit>:
+	...
+
+Disassembly of section .text:
+
+00010020 <_start>:
+
+    /*
+     * Now that the caches are initialized, set up the stack pointer and global pointer.
+     * The values provided by the linker are assumed to be correctly aligned.
+     */
+    movhi sp, %hi(__alt_stack_pointer)
+   10020:	06c000b4 	movhi	sp,2
+    ori sp, sp, %lo(__alt_stack_pointer)
+   10024:	dec00014 	ori	sp,sp,0
+    movhi gp, %hi(_gp)
+   10028:	06800074 	movhi	gp,1
+    ori gp, gp, %lo(_gp)
+   1002c:	d6b1af14 	ori	gp,gp,50876
+ */
+#ifndef ALT_SIM_OPTIMIZE
+    /* Log that the BSS is about to be cleared. */
+    ALT_LOG_PUTS(alt_log_msg_bss)
+
+    movhi r2, %hi(__bss_start)
+   10030:	00800074 	movhi	r2,1
+    ori r2, r2, %lo(__bss_start)
+   10034:	1091b114 	ori	r2,r2,18116
+
+    movhi r3, %hi(__bss_end)
+   10038:	00c00074 	movhi	r3,1
+    ori r3, r3, %lo(__bss_end)
+   1003c:	18d1b614 	ori	r3,r3,18136
+
+    beq r2, r3, 1f
+   10040:	10c00326 	beq	r2,r3,10050 <_start+0x30>
+
+0:
+    stw zero, (r2)
+   10044:	10000015 	stw	zero,0(r2)
+    addi r2, r2, 4
+   10048:	10800104 	addi	r2,r2,4
+    bltu r2, r3, 0b
+   1004c:	10fffd36 	bltu	r2,r3,10044 <__alt_data_end+0xffff0044>
+     * section aren't defined until alt_load() has been called).
+     */
+    mov   et, zero
+#endif
+
+    call alt_load
+   10050:	0011d1c0 	call	11d1c <alt_load>
+
+    /* Log that alt_main is about to be called. */
+    ALT_LOG_PUTS(alt_log_msg_alt_main)
+
+    /* Call the C entry point. It should never return. */
+    call alt_main
+   10054:	0011dfc0 	call	11dfc <alt_main>
+
+00010058 <alt_after_alt_main>:
+
+    /* Wait in infinite loop in case alt_main does return. */
+alt_after_alt_main:
+    br alt_after_alt_main
+   10058:	003fff06 	br	10058 <__alt_data_end+0xffff0058>
+
+0001005c <AES_set_encrypt_key>:
+/**
+ * Expand the cipher key into the encryption key schedule.
+ */
+int AES_set_encrypt_key(const unsigned char *userKey,
+			const int bits,
+			AES_KEY *key) {
+   1005c:	defff604 	addi	sp,sp,-40
+   10060:	dfc00915 	stw	ra,36(sp)
+   10064:	df000815 	stw	fp,32(sp)
+   10068:	ddc00715 	stw	r23,28(sp)
+   1006c:	dd800615 	stw	r22,24(sp)
+   10070:	dd400515 	stw	r21,20(sp)
+   10074:	dd000415 	stw	r20,16(sp)
+   10078:	dcc00315 	stw	r19,12(sp)
+   1007c:	dc800215 	stw	r18,8(sp)
+   10080:	dc400115 	stw	r17,4(sp)
+   10084:	dc000015 	stw	r16,0(sp)
+
+    u32 *rk;
+    int i = 0;
+    u32 temp;
+
+    if (!userKey || !key)
+   10088:	20017026 	beq	r4,zero,1064c <AES_set_encrypt_key+0x5f0>
+   1008c:	30016f26 	beq	r6,zero,1064c <AES_set_encrypt_key+0x5f0>
+	return -1;
+    if (bits != 128 && bits != 192 && bits != 256)
+   10090:	00bfefc4 	movi	r2,-65
+   10094:	2884703a 	and	r2,r5,r2
+   10098:	01c02004 	movi	r7,128
+   1009c:	11c00226 	beq	r2,r7,100a8 <AES_set_encrypt_key+0x4c>
+   100a0:	00804004 	movi	r2,256
+   100a4:	28816b1e 	bne	r5,r2,10654 <AES_set_encrypt_key+0x5f8>
+	return -2;
+
+    rk = key->rd_key;
+   100a8:	3007883a 	mov	r3,r6
+
+    if (bits==128)
+   100ac:	29c0021e 	bne	r5,r7,100b8 <AES_set_encrypt_key+0x5c>
+	key->rounds = 10;
+   100b0:	00800284 	movi	r2,10
+   100b4:	00000506 	br	100cc <AES_set_encrypt_key+0x70>
+    else if (bits==192)
+   100b8:	00803004 	movi	r2,192
+   100bc:	2880021e 	bne	r5,r2,100c8 <AES_set_encrypt_key+0x6c>
+	key->rounds = 12;
+   100c0:	00800304 	movi	r2,12
+   100c4:	00000106 	br	100cc <AES_set_encrypt_key+0x70>
+    else
+	key->rounds = 14;
+   100c8:	00800384 	movi	r2,14
+   100cc:	30803c15 	stw	r2,240(r6)
+
+    rk[0] = GETU32(userKey     );
+   100d0:	20800003 	ldbu	r2,0(r4)
+   100d4:	100e963a 	slli	r7,r2,24
+   100d8:	20800043 	ldbu	r2,1(r4)
+   100dc:	1004943a 	slli	r2,r2,16
+   100e0:	3884f03a 	xor	r2,r7,r2
+   100e4:	21c000c3 	ldbu	r7,3(r4)
+   100e8:	11cef03a 	xor	r7,r2,r7
+   100ec:	20800083 	ldbu	r2,2(r4)
+   100f0:	1004923a 	slli	r2,r2,8
+   100f4:	3884f03a 	xor	r2,r7,r2
+   100f8:	30800015 	stw	r2,0(r6)
+    rk[1] = GETU32(userKey +  4);
+   100fc:	20800103 	ldbu	r2,4(r4)
+   10100:	100e963a 	slli	r7,r2,24
+   10104:	20800143 	ldbu	r2,5(r4)
+   10108:	1004943a 	slli	r2,r2,16
+   1010c:	3884f03a 	xor	r2,r7,r2
+   10110:	21c001c3 	ldbu	r7,7(r4)
+   10114:	11cef03a 	xor	r7,r2,r7
+   10118:	20800183 	ldbu	r2,6(r4)
+   1011c:	1004923a 	slli	r2,r2,8
+   10120:	3884f03a 	xor	r2,r7,r2
+   10124:	30800115 	stw	r2,4(r6)
+    rk[2] = GETU32(userKey +  8);
+   10128:	20800203 	ldbu	r2,8(r4)
+   1012c:	100e963a 	slli	r7,r2,24
+   10130:	20800243 	ldbu	r2,9(r4)
+   10134:	1004943a 	slli	r2,r2,16
+   10138:	3884f03a 	xor	r2,r7,r2
+   1013c:	21c002c3 	ldbu	r7,11(r4)
+   10140:	11cef03a 	xor	r7,r2,r7
+   10144:	20800283 	ldbu	r2,10(r4)
+   10148:	1004923a 	slli	r2,r2,8
+   1014c:	3884f03a 	xor	r2,r7,r2
+   10150:	30800215 	stw	r2,8(r6)
+    rk[3] = GETU32(userKey + 12);
+   10154:	20800303 	ldbu	r2,12(r4)
+   10158:	100e963a 	slli	r7,r2,24
+   1015c:	20800343 	ldbu	r2,13(r4)
+   10160:	1004943a 	slli	r2,r2,16
+   10164:	3884f03a 	xor	r2,r7,r2
+   10168:	21c003c3 	ldbu	r7,15(r4)
+   1016c:	11cef03a 	xor	r7,r2,r7
+   10170:	20800383 	ldbu	r2,14(r4)
+   10174:	1004923a 	slli	r2,r2,8
+   10178:	3884f03a 	xor	r2,r7,r2
+   1017c:	30800315 	stw	r2,12(r6)
+    if (bits == 128) {
+   10180:	00802004 	movi	r2,128
+   10184:	2880411e 	bne	r5,r2,1028c <AES_set_encrypt_key+0x230>
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   10188:	03800074 	movhi	r14,1
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   1018c:	01c00074 	movhi	r7,1
+   10190:	33400404 	addi	r13,r6,16
+   10194:	33000304 	addi	r12,r6,12
+   10198:	32c00104 	addi	r11,r6,4
+   1019c:	32800504 	addi	r10,r6,20
+   101a0:	32400204 	addi	r9,r6,8
+   101a4:	32000604 	addi	r8,r6,24
+
+    rk[0] = GETU32(userKey     );
+    rk[1] = GETU32(userKey +  4);
+    rk[2] = GETU32(userKey +  8);
+    rk[3] = GETU32(userKey + 12);
+    if (bits == 128) {
+   101a8:	000b883a 	mov	r5,zero
+   101ac:	31800704 	addi	r6,r6,28
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   101b0:	73879d04 	addi	r14,r14,7796
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   101b4:	39cca704 	addi	r7,r7,12956
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[5] = rk[1] ^ rk[4];
+	    rk[6] = rk[2] ^ rk[5];
+	    rk[7] = rk[3] ^ rk[6];
+	    if (++i == 10) {
+   101b8:	03c00a04 	movi	r15,40
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   101bc:	2b85883a 	add	r2,r5,r14
+    rk[1] = GETU32(userKey +  4);
+    rk[2] = GETU32(userKey +  8);
+    rk[3] = GETU32(userKey + 12);
+    if (bits == 128) {
+	while (1) {
+	    temp  = rk[3];
+   101c0:	64000017 	ldw	r16,0(r12)
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   101c4:	11000017 	ldw	r4,0(r2)
+   101c8:	18800017 	ldw	r2,0(r3)
+    rk[3] = GETU32(userKey + 12);
+    if (bits == 128) {
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   101cc:	8022d3ba 	srli	r17,r16,14
+   101d0:	29400104 	addi	r5,r5,4
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   101d4:	2088f03a 	xor	r4,r4,r2
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   101d8:	80803fcc 	andi	r2,r16,255
+   101dc:	1085883a 	add	r2,r2,r2
+   101e0:	1085883a 	add	r2,r2,r2
+   101e4:	3885883a 	add	r2,r7,r2
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   101e8:	10800017 	ldw	r2,0(r2)
+    rk[3] = GETU32(userKey + 12);
+    if (bits == 128) {
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   101ec:	8c40ff0c 	andi	r17,r17,1020
+   101f0:	3c63883a 	add	r17,r7,r17
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   101f4:	10bfc00c 	andi	r2,r2,65280
+   101f8:	2088f03a 	xor	r4,r4,r2
+   101fc:	8004d63a 	srli	r2,r16,24
+   10200:	6b400404 	addi	r13,r13,16
+   10204:	63000404 	addi	r12,r12,16
+   10208:	1085883a 	add	r2,r2,r2
+   1020c:	1085883a 	add	r2,r2,r2
+   10210:	3885883a 	add	r2,r7,r2
+   10214:	10800003 	ldbu	r2,0(r2)
+   10218:	5ac00404 	addi	r11,r11,16
+   1021c:	52800404 	addi	r10,r10,16
+   10220:	2088f03a 	xor	r4,r4,r2
+   10224:	88800017 	ldw	r2,0(r17)
+   10228:	4a400404 	addi	r9,r9,16
+   1022c:	42000404 	addi	r8,r8,16
+   10230:	10bfc02c 	andhi	r2,r2,65280
+   10234:	2088f03a 	xor	r4,r4,r2
+    if (bits == 128) {
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+   10238:	8004d1ba 	srli	r2,r16,6
+   1023c:	31800404 	addi	r6,r6,16
+   10240:	1080ff0c 	andi	r2,r2,1020
+   10244:	3885883a 	add	r2,r7,r2
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10248:	10800017 	ldw	r2,0(r2)
+   1024c:	10803fec 	andhi	r2,r2,255
+   10250:	2088f03a 	xor	r4,r4,r2
+    rk[2] = GETU32(userKey +  8);
+    rk[3] = GETU32(userKey + 12);
+    if (bits == 128) {
+	while (1) {
+	    temp  = rk[3];
+	    rk[4] = rk[0] ^
+   10254:	693ffc15 	stw	r4,-16(r13)
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[5] = rk[1] ^ rk[4];
+   10258:	58bffc17 	ldw	r2,-16(r11)
+   1025c:	2084f03a 	xor	r2,r4,r2
+   10260:	50bffc15 	stw	r2,-16(r10)
+	    rk[6] = rk[2] ^ rk[5];
+   10264:	493ffc17 	ldw	r4,-16(r9)
+   10268:	1104f03a 	xor	r2,r2,r4
+   1026c:	40bffc15 	stw	r2,-16(r8)
+	    rk[7] = rk[3] ^ rk[6];
+   10270:	8084f03a 	xor	r2,r16,r2
+   10274:	30bffc15 	stw	r2,-16(r6)
+	    if (++i == 10) {
+   10278:	2bc0021e 	bne	r5,r15,10284 <AES_set_encrypt_key+0x228>
+		return 0;
+   1027c:	0005883a 	mov	r2,zero
+   10280:	0000f506 	br	10658 <AES_set_encrypt_key+0x5fc>
+	    }
+	    rk += 4;
+   10284:	18c00404 	addi	r3,r3,16
+	}
+   10288:	003fcc06 	br	101bc <__alt_data_end+0xffff01bc>
+    }
+    rk[4] = GETU32(userKey + 16);
+   1028c:	20800403 	ldbu	r2,16(r4)
+   10290:	100e963a 	slli	r7,r2,24
+   10294:	20800443 	ldbu	r2,17(r4)
+   10298:	1004943a 	slli	r2,r2,16
+   1029c:	3884f03a 	xor	r2,r7,r2
+   102a0:	21c004c3 	ldbu	r7,19(r4)
+   102a4:	11cef03a 	xor	r7,r2,r7
+   102a8:	20800483 	ldbu	r2,18(r4)
+   102ac:	1004923a 	slli	r2,r2,8
+   102b0:	3884f03a 	xor	r2,r7,r2
+   102b4:	30800415 	stw	r2,16(r6)
+    rk[5] = GETU32(userKey + 20);
+   102b8:	20800503 	ldbu	r2,20(r4)
+   102bc:	100e963a 	slli	r7,r2,24
+   102c0:	20800543 	ldbu	r2,21(r4)
+   102c4:	1004943a 	slli	r2,r2,16
+   102c8:	3884f03a 	xor	r2,r7,r2
+   102cc:	21c005c3 	ldbu	r7,23(r4)
+   102d0:	11cef03a 	xor	r7,r2,r7
+   102d4:	20800583 	ldbu	r2,22(r4)
+   102d8:	1004923a 	slli	r2,r2,8
+   102dc:	3884f03a 	xor	r2,r7,r2
+   102e0:	30800515 	stw	r2,20(r6)
+    if (bits == 192) {
+   102e4:	00803004 	movi	r2,192
+   102e8:	28804d1e 	bne	r5,r2,10420 <AES_set_encrypt_key+0x3c4>
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   102ec:	04800074 	movhi	r18,1
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   102f0:	01c00074 	movhi	r7,1
+   102f4:	32800604 	addi	r10,r6,24
+   102f8:	34400504 	addi	r17,r6,20
+   102fc:	34000104 	addi	r16,r6,4
+   10300:	33c00704 	addi	r15,r6,28
+   10304:	33800204 	addi	r14,r6,8
+   10308:	33400804 	addi	r13,r6,32
+   1030c:	33000304 	addi	r12,r6,12
+   10310:	32c00904 	addi	r11,r6,36
+   10314:	32400404 	addi	r9,r6,16
+   10318:	32000a04 	addi	r8,r6,40
+	    rk += 4;
+	}
+    }
+    rk[4] = GETU32(userKey + 16);
+    rk[5] = GETU32(userKey + 20);
+    if (bits == 192) {
+   1031c:	000b883a 	mov	r5,zero
+   10320:	31800b04 	addi	r6,r6,44
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   10324:	94879d04 	addi	r18,r18,7796
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   10328:	39cca704 	addi	r7,r7,12956
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[ 7] = rk[ 1] ^ rk[ 6];
+	    rk[ 8] = rk[ 2] ^ rk[ 7];
+	    rk[ 9] = rk[ 3] ^ rk[ 8];
+	    if (++i == 8) {
+   1032c:	04c00804 	movi	r19,32
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   10330:	2c85883a 	add	r2,r5,r18
+    }
+    rk[4] = GETU32(userKey + 16);
+    rk[5] = GETU32(userKey + 20);
+    if (bits == 192) {
+	while (1) {
+	    temp = rk[ 5];
+   10334:	89000017 	ldw	r4,0(r17)
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10338:	15000017 	ldw	r20,0(r2)
+   1033c:	18800017 	ldw	r2,0(r3)
+    rk[5] = GETU32(userKey + 20);
+    if (bits == 192) {
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   10340:	202ad3ba 	srli	r21,r4,14
+   10344:	29400104 	addi	r5,r5,4
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10348:	a0a8f03a 	xor	r20,r20,r2
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   1034c:	20803fcc 	andi	r2,r4,255
+   10350:	1085883a 	add	r2,r2,r2
+   10354:	1085883a 	add	r2,r2,r2
+   10358:	3885883a 	add	r2,r7,r2
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   1035c:	10800017 	ldw	r2,0(r2)
+    rk[5] = GETU32(userKey + 20);
+    if (bits == 192) {
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   10360:	ad40ff0c 	andi	r21,r21,1020
+   10364:	3d6b883a 	add	r21,r7,r21
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10368:	10bfc00c 	andi	r2,r2,65280
+   1036c:	a0a8f03a 	xor	r20,r20,r2
+   10370:	2004d63a 	srli	r2,r4,24
+   10374:	52800604 	addi	r10,r10,24
+   10378:	8c400604 	addi	r17,r17,24
+   1037c:	1085883a 	add	r2,r2,r2
+   10380:	1085883a 	add	r2,r2,r2
+   10384:	3885883a 	add	r2,r7,r2
+   10388:	10800003 	ldbu	r2,0(r2)
+   1038c:	84000604 	addi	r16,r16,24
+   10390:	7bc00604 	addi	r15,r15,24
+   10394:	a084f03a 	xor	r2,r20,r2
+   10398:	ad000017 	ldw	r20,0(r21)
+   1039c:	73800604 	addi	r14,r14,24
+   103a0:	6b400604 	addi	r13,r13,24
+   103a4:	a53fc02c 	andhi	r20,r20,65280
+   103a8:	1528f03a 	xor	r20,r2,r20
+    if (bits == 192) {
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+   103ac:	2004d1ba 	srli	r2,r4,6
+   103b0:	63000604 	addi	r12,r12,24
+   103b4:	5ac00604 	addi	r11,r11,24
+   103b8:	1080ff0c 	andi	r2,r2,1020
+   103bc:	3885883a 	add	r2,r7,r2
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   103c0:	10800017 	ldw	r2,0(r2)
+   103c4:	10803fec 	andhi	r2,r2,255
+   103c8:	a084f03a 	xor	r2,r20,r2
+    rk[4] = GETU32(userKey + 16);
+    rk[5] = GETU32(userKey + 20);
+    if (bits == 192) {
+	while (1) {
+	    temp = rk[ 5];
+	    rk[ 6] = rk[ 0] ^
+   103cc:	50bffa15 	stw	r2,-24(r10)
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[ 7] = rk[ 1] ^ rk[ 6];
+   103d0:	853ffa17 	ldw	r20,-24(r16)
+   103d4:	1504f03a 	xor	r2,r2,r20
+   103d8:	78bffa15 	stw	r2,-24(r15)
+	    rk[ 8] = rk[ 2] ^ rk[ 7];
+   103dc:	757ffa17 	ldw	r21,-24(r14)
+   103e0:	1544f03a 	xor	r2,r2,r21
+   103e4:	68bffa15 	stw	r2,-24(r13)
+	    rk[ 9] = rk[ 3] ^ rk[ 8];
+   103e8:	653ffa17 	ldw	r20,-24(r12)
+   103ec:	1528f03a 	xor	r20,r2,r20
+   103f0:	5d3ffa15 	stw	r20,-24(r11)
+	    if (++i == 8) {
+   103f4:	2cffa126 	beq	r5,r19,1027c <__alt_data_end+0xffff027c>
+		return 0;
+	    }
+	    rk[10] = rk[ 4] ^ rk[ 9];
+   103f8:	48800017 	ldw	r2,0(r9)
+	    rk[11] = rk[ 5] ^ rk[10];
+	    rk += 6;
+   103fc:	18c00604 	addi	r3,r3,24
+   10400:	4a400604 	addi	r9,r9,24
+	    rk[ 8] = rk[ 2] ^ rk[ 7];
+	    rk[ 9] = rk[ 3] ^ rk[ 8];
+	    if (++i == 8) {
+		return 0;
+	    }
+	    rk[10] = rk[ 4] ^ rk[ 9];
+   10404:	a084f03a 	xor	r2,r20,r2
+   10408:	40800015 	stw	r2,0(r8)
+	    rk[11] = rk[ 5] ^ rk[10];
+   1040c:	2088f03a 	xor	r4,r4,r2
+   10410:	31000015 	stw	r4,0(r6)
+   10414:	42000604 	addi	r8,r8,24
+   10418:	31800604 	addi	r6,r6,24
+	    rk += 6;
+	}
+   1041c:	003fc406 	br	10330 <__alt_data_end+0xffff0330>
+    }
+    rk[6] = GETU32(userKey + 24);
+   10420:	20800603 	ldbu	r2,24(r4)
+   10424:	100e963a 	slli	r7,r2,24
+   10428:	20800643 	ldbu	r2,25(r4)
+   1042c:	1004943a 	slli	r2,r2,16
+   10430:	3884f03a 	xor	r2,r7,r2
+   10434:	21c006c3 	ldbu	r7,27(r4)
+   10438:	11cef03a 	xor	r7,r2,r7
+   1043c:	20800683 	ldbu	r2,26(r4)
+   10440:	1004923a 	slli	r2,r2,8
+   10444:	3884f03a 	xor	r2,r7,r2
+   10448:	30800615 	stw	r2,24(r6)
+    rk[7] = GETU32(userKey + 28);
+   1044c:	20800703 	ldbu	r2,28(r4)
+   10450:	100e963a 	slli	r7,r2,24
+   10454:	20800743 	ldbu	r2,29(r4)
+   10458:	1004943a 	slli	r2,r2,16
+   1045c:	3884f03a 	xor	r2,r7,r2
+   10460:	21c007c3 	ldbu	r7,31(r4)
+   10464:	11cef03a 	xor	r7,r2,r7
+   10468:	20800783 	ldbu	r2,30(r4)
+   1046c:	1004923a 	slli	r2,r2,8
+   10470:	3884f03a 	xor	r2,r7,r2
+   10474:	30800715 	stw	r2,28(r6)
+    if (bits == 256) {
+   10478:	00804004 	movi	r2,256
+   1047c:	28bf7f1e 	bne	r5,r2,1027c <__alt_data_end+0xffff027c>
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   10480:	05800074 	movhi	r22,1
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   10484:	01000074 	movhi	r4,1
+   10488:	35400804 	addi	r21,r6,32
+   1048c:	35000704 	addi	r20,r6,28
+   10490:	34c00104 	addi	r19,r6,4
+   10494:	34800904 	addi	r18,r6,36
+   10498:	34400204 	addi	r17,r6,8
+   1049c:	34000a04 	addi	r16,r6,40
+   104a0:	37c00304 	addi	ra,r6,12
+   104a4:	33c00b04 	addi	r15,r6,44
+   104a8:	33800404 	addi	r14,r6,16
+   104ac:	33400c04 	addi	r13,r6,48
+   104b0:	33000504 	addi	r12,r6,20
+   104b4:	32c00d04 	addi	r11,r6,52
+   104b8:	32800604 	addi	r10,r6,24
+   104bc:	32400e04 	addi	r9,r6,56
+	    rk += 6;
+	}
+    }
+    rk[6] = GETU32(userKey + 24);
+    rk[7] = GETU32(userKey + 28);
+    if (bits == 256) {
+   104c0:	0011883a 	mov	r8,zero
+   104c4:	31800f04 	addi	r6,r6,60
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   104c8:	b5879d04 	addi	r22,r22,7796
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   104cc:	210ca704 	addi	r4,r4,12956
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[ 9] = rk[ 1] ^ rk[ 8];
+	    rk[10] = rk[ 2] ^ rk[ 9];
+	    rk[11] = rk[ 3] ^ rk[10];
+	    if (++i == 7) {
+   104d0:	05c00704 	movi	r23,28
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+   104d4:	4585883a 	add	r2,r8,r22
+    }
+    rk[6] = GETU32(userKey + 24);
+    rk[7] = GETU32(userKey + 28);
+    if (bits == 256) {
+	while (1) {
+	    temp = rk[ 7];
+   104d8:	a1400017 	ldw	r5,0(r20)
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   104dc:	11c00017 	ldw	r7,0(r2)
+   104e0:	18800017 	ldw	r2,0(r3)
+   104e4:	42000104 	addi	r8,r8,4
+   104e8:	ad400804 	addi	r21,r21,32
+   104ec:	38b8f03a 	xor	fp,r7,r2
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+   104f0:	28803fcc 	andi	r2,r5,255
+   104f4:	1085883a 	add	r2,r2,r2
+   104f8:	1085883a 	add	r2,r2,r2
+   104fc:	2085883a 	add	r2,r4,r2
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10500:	11c00017 	ldw	r7,0(r2)
+   10504:	2804d63a 	srli	r2,r5,24
+   10508:	a5000804 	addi	r20,r20,32
+   1050c:	39ffc00c 	andi	r7,r7,65280
+   10510:	1085883a 	add	r2,r2,r2
+   10514:	e1cef03a 	xor	r7,fp,r7
+   10518:	1085883a 	add	r2,r2,r2
+    rk[7] = GETU32(userKey + 28);
+    if (bits == 256) {
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   1051c:	2838d3ba 	srli	fp,r5,14
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10520:	2085883a 	add	r2,r4,r2
+   10524:	10800003 	ldbu	r2,0(r2)
+    rk[7] = GETU32(userKey + 28);
+    if (bits == 256) {
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+   10528:	e700ff0c 	andi	fp,fp,1020
+   1052c:	2739883a 	add	fp,r4,fp
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   10530:	388ef03a 	xor	r7,r7,r2
+   10534:	e0800017 	ldw	r2,0(fp)
+   10538:	9cc00804 	addi	r19,r19,32
+   1053c:	94800804 	addi	r18,r18,32
+   10540:	10bfc02c 	andhi	r2,r2,65280
+   10544:	388ef03a 	xor	r7,r7,r2
+    if (bits == 256) {
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+   10548:	2804d1ba 	srli	r2,r5,6
+   1054c:	8c400804 	addi	r17,r17,32
+   10550:	84000804 	addi	r16,r16,32
+   10554:	1080ff0c 	andi	r2,r2,1020
+   10558:	2085883a 	add	r2,r4,r2
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+   1055c:	10800017 	ldw	r2,0(r2)
+   10560:	ffc00804 	addi	ra,ra,32
+   10564:	7bc00804 	addi	r15,r15,32
+   10568:	10803fec 	andhi	r2,r2,255
+   1056c:	388ef03a 	xor	r7,r7,r2
+    rk[6] = GETU32(userKey + 24);
+    rk[7] = GETU32(userKey + 28);
+    if (bits == 256) {
+	while (1) {
+	    temp = rk[ 7];
+	    rk[ 8] = rk[ 0] ^
+   10570:	a9fff815 	stw	r7,-32(r21)
+		(Te4[(temp >> 16) & 0xff] & 0xff000000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp      ) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp >> 24)       ] & 0x000000ff) ^
+		rcon[i];
+	    rk[ 9] = rk[ 1] ^ rk[ 8];
+   10574:	98bff817 	ldw	r2,-32(r19)
+   10578:	388ef03a 	xor	r7,r7,r2
+   1057c:	91fff815 	stw	r7,-32(r18)
+	    rk[10] = rk[ 2] ^ rk[ 9];
+   10580:	8f3ff817 	ldw	fp,-32(r17)
+   10584:	3f0ef03a 	xor	r7,r7,fp
+   10588:	81fff815 	stw	r7,-32(r16)
+	    rk[11] = rk[ 3] ^ rk[10];
+   1058c:	f8bff817 	ldw	r2,-32(ra)
+   10590:	3884f03a 	xor	r2,r7,r2
+   10594:	78bff815 	stw	r2,-32(r15)
+	    if (++i == 7) {
+   10598:	45ff3826 	beq	r8,r23,1027c <__alt_data_end+0xffff027c>
+		return 0;
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+   1059c:	100ed63a 	srli	r7,r2,24
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp      ) & 0xff] & 0x000000ff);
+   105a0:	17003fcc 	andi	fp,r2,255
+   105a4:	e739883a 	add	fp,fp,fp
+	    if (++i == 7) {
+		return 0;
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+   105a8:	39cf883a 	add	r7,r7,r7
+   105ac:	39cf883a 	add	r7,r7,r7
+   105b0:	21cf883a 	add	r7,r4,r7
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp      ) & 0xff] & 0x000000ff);
+   105b4:	e739883a 	add	fp,fp,fp
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+   105b8:	39c00017 	ldw	r7,0(r7)
+		(Te4[(temp      ) & 0xff] & 0x000000ff);
+   105bc:	2739883a 	add	fp,r4,fp
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+   105c0:	e7000003 	ldbu	fp,0(fp)
+   105c4:	39ffc02c 	andhi	r7,r7,65280
+		(Te4[(temp      ) & 0xff] & 0x000000ff);
+	    rk[13] = rk[ 5] ^ rk[12];
+	    rk[14] = rk[ 6] ^ rk[13];
+	    rk[15] = rk[ 7] ^ rk[14];
+
+	    rk += 8;
+   105c8:	18c00804 	addi	r3,r3,32
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+   105cc:	3f0ef03a 	xor	r7,r7,fp
+   105d0:	77000017 	ldw	fp,0(r14)
+   105d4:	6b400804 	addi	r13,r13,32
+   105d8:	73800804 	addi	r14,r14,32
+   105dc:	3f0ef03a 	xor	r7,r7,fp
+		return 0;
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+   105e0:	1038d3ba 	srli	fp,r2,14
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+   105e4:	1004d1ba 	srli	r2,r2,6
+   105e8:	63000804 	addi	r12,r12,32
+		return 0;
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+   105ec:	e700ff0c 	andi	fp,fp,1020
+   105f0:	2739883a 	add	fp,r4,fp
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+   105f4:	1080ff0c 	andi	r2,r2,1020
+   105f8:	e7000017 	ldw	fp,0(fp)
+   105fc:	2085883a 	add	r2,r4,r2
+   10600:	10800017 	ldw	r2,0(r2)
+   10604:	e7003fec 	andhi	fp,fp,255
+   10608:	3f0ef03a 	xor	r7,r7,fp
+   1060c:	10bfc00c 	andi	r2,r2,65280
+   10610:	388ef03a 	xor	r7,r7,r2
+	    rk[11] = rk[ 3] ^ rk[10];
+	    if (++i == 7) {
+		return 0;
+	    }
+	    temp = rk[11];
+	    rk[12] = rk[ 4] ^
+   10614:	69fff815 	stw	r7,-32(r13)
+		(Te4[(temp >> 24)       ] & 0xff000000) ^
+		(Te4[(temp >> 16) & 0xff] & 0x00ff0000) ^
+		(Te4[(temp >>  8) & 0xff] & 0x0000ff00) ^
+		(Te4[(temp      ) & 0xff] & 0x000000ff);
+	    rk[13] = rk[ 5] ^ rk[12];
+   10618:	60bff817 	ldw	r2,-32(r12)
+   1061c:	5ac00804 	addi	r11,r11,32
+   10620:	52800804 	addi	r10,r10,32
+   10624:	388ef03a 	xor	r7,r7,r2
+   10628:	59fff815 	stw	r7,-32(r11)
+	    rk[14] = rk[ 6] ^ rk[13];
+   1062c:	50bff817 	ldw	r2,-32(r10)
+   10630:	4a400804 	addi	r9,r9,32
+   10634:	31800804 	addi	r6,r6,32
+   10638:	388ef03a 	xor	r7,r7,r2
+   1063c:	49fff815 	stw	r7,-32(r9)
+	    rk[15] = rk[ 7] ^ rk[14];
+   10640:	29caf03a 	xor	r5,r5,r7
+   10644:	317ff815 	stw	r5,-32(r6)
+
+	    rk += 8;
+	}
+   10648:	003fa206 	br	104d4 <__alt_data_end+0xffff04d4>
+    u32 *rk;
+    int i = 0;
+    u32 temp;
+
+    if (!userKey || !key)
+	return -1;
+   1064c:	00bfffc4 	movi	r2,-1
+   10650:	00000106 	br	10658 <AES_set_encrypt_key+0x5fc>
+    if (bits != 128 && bits != 192 && bits != 256)
+	return -2;
+   10654:	00bfff84 	movi	r2,-2
+
+	    rk += 8;
+	}
+    }
+    return 0;
+}
+   10658:	dfc00917 	ldw	ra,36(sp)
+   1065c:	df000817 	ldw	fp,32(sp)
+   10660:	ddc00717 	ldw	r23,28(sp)
+   10664:	dd800617 	ldw	r22,24(sp)
+   10668:	dd400517 	ldw	r21,20(sp)
+   1066c:	dd000417 	ldw	r20,16(sp)
+   10670:	dcc00317 	ldw	r19,12(sp)
+   10674:	dc800217 	ldw	r18,8(sp)
+   10678:	dc400117 	ldw	r17,4(sp)
+   1067c:	dc000017 	ldw	r16,0(sp)
+   10680:	dec00a04 	addi	sp,sp,40
+   10684:	f800283a 	ret
+
+00010688 <AES_set_decrypt_key>:
+/**
+ * Expand the cipher key into the decryption key schedule.
+ */
+int AES_set_decrypt_key(const unsigned char *userKey,
+			const int bits,
+			AES_KEY *key) {
+   10688:	defffe04 	addi	sp,sp,-8
+   1068c:	dc000015 	stw	r16,0(sp)
+   10690:	dfc00115 	stw	ra,4(sp)
+   10694:	3021883a 	mov	r16,r6
+    u32 *rk;
+    int i, j, status;
+    u32 temp;
+
+    /* first, start with an encryption schedule */
+    status = AES_set_encrypt_key(userKey, bits, key);
+   10698:	001005c0 	call	1005c <AES_set_encrypt_key>
+    if (status < 0)
+   1069c:	1000d816 	blt	r2,zero,10a00 <AES_set_decrypt_key+0x378>
+   106a0:	80c03c17 	ldw	r3,240(r16)
+	return status;
+
+    rk = key->rd_key;
+   106a4:	8009883a 	mov	r4,r16
+   106a8:	800d883a 	mov	r6,r16
+   106ac:	18c7883a 	add	r3,r3,r3
+   106b0:	18c7883a 	add	r3,r3,r3
+   106b4:	18c5883a 	add	r2,r3,r3
+   106b8:	1085883a 	add	r2,r2,r2
+   106bc:	8085883a 	add	r2,r16,r2
+   106c0:	81c00104 	addi	r7,r16,4
+   106c4:	82000204 	addi	r8,r16,8
+   106c8:	82400304 	addi	r9,r16,12
+
+    /* invert the order of the round keys: */
+    for (i = 0, j = 4*(key->rounds); i < j; i += 4, j -= 4) {
+   106cc:	000b883a 	mov	r5,zero
+   106d0:	1955c83a 	sub	r10,r3,r5
+   106d4:	2a80170e 	bge	r5,r10,10734 <AES_set_decrypt_key+0xac>
+	temp = rk[i    ]; rk[i    ] = rk[j    ]; rk[j    ] = temp;
+   106d8:	12c00017 	ldw	r11,0(r2)
+   106dc:	32800017 	ldw	r10,0(r6)
+	return status;
+
+    rk = key->rd_key;
+
+    /* invert the order of the round keys: */
+    for (i = 0, j = 4*(key->rounds); i < j; i += 4, j -= 4) {
+   106e0:	29400104 	addi	r5,r5,4
+	temp = rk[i    ]; rk[i    ] = rk[j    ]; rk[j    ] = temp;
+   106e4:	32c00015 	stw	r11,0(r6)
+   106e8:	12800015 	stw	r10,0(r2)
+	temp = rk[i + 1]; rk[i + 1] = rk[j + 1]; rk[j + 1] = temp;
+   106ec:	12c00117 	ldw	r11,4(r2)
+   106f0:	3a800017 	ldw	r10,0(r7)
+   106f4:	31800404 	addi	r6,r6,16
+   106f8:	3ac00015 	stw	r11,0(r7)
+   106fc:	12800115 	stw	r10,4(r2)
+	temp = rk[i + 2]; rk[i + 2] = rk[j + 2]; rk[j + 2] = temp;
+   10700:	12c00217 	ldw	r11,8(r2)
+   10704:	42800017 	ldw	r10,0(r8)
+   10708:	10bffc04 	addi	r2,r2,-16
+   1070c:	42c00015 	stw	r11,0(r8)
+   10710:	12800615 	stw	r10,24(r2)
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+   10714:	12c00717 	ldw	r11,28(r2)
+   10718:	4a800017 	ldw	r10,0(r9)
+   1071c:	39c00404 	addi	r7,r7,16
+   10720:	4ac00015 	stw	r11,0(r9)
+   10724:	12800715 	stw	r10,28(r2)
+   10728:	42000404 	addi	r8,r8,16
+   1072c:	4a400404 	addi	r9,r9,16
+   10730:	003fe706 	br	106d0 <__alt_data_end+0xffff06d0>
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+   10734:	02000074 	movhi	r8,1
+   10738:	00800074 	movhi	r2,1
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+   1073c:	02400074 	movhi	r9,1
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   10740:	02800074 	movhi	r10,1
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   10744:	02c00074 	movhi	r11,1
+   10748:	81400504 	addi	r5,r16,20
+   1074c:	81800604 	addi	r6,r16,24
+   10750:	81c00704 	addi	r7,r16,28
+	return status;
+
+    rk = key->rd_key;
+
+    /* invert the order of the round keys: */
+    for (i = 0, j = 4*(key->rounds); i < j; i += 4, j -= 4) {
+   10754:	03000044 	movi	r12,1
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+   10758:	420ba704 	addi	r8,r8,11932
+   1075c:	108ca704 	addi	r2,r2,12956
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+   10760:	4a48a704 	addi	r9,r9,8860
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   10764:	528aa704 	addi	r10,r10,10908
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   10768:	5ac9a704 	addi	r11,r11,9884
+	temp = rk[i + 1]; rk[i + 1] = rk[j + 1]; rk[j + 1] = temp;
+	temp = rk[i + 2]; rk[i + 2] = rk[j + 2]; rk[j + 2] = temp;
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+   1076c:	80c03c17 	ldw	r3,240(r16)
+   10770:	60c0a20e 	bge	r12,r3,109fc <AES_set_decrypt_key+0x374>
+	rk += 4;
+   10774:	21000404 	addi	r4,r4,16
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+   10778:	20c00017 	ldw	r3,0(r4)
+	temp = rk[i + 1]; rk[i + 1] = rk[j + 1]; rk[j + 1] = temp;
+	temp = rk[i + 2]; rk[i + 2] = rk[j + 2]; rk[j + 2] = temp;
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+   1077c:	63000044 	addi	r12,r12,1
+   10780:	29400404 	addi	r5,r5,16
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+   10784:	181ad63a 	srli	r13,r3,24
+   10788:	31800404 	addi	r6,r6,16
+   1078c:	39c00404 	addi	r7,r7,16
+   10790:	6b5b883a 	add	r13,r13,r13
+   10794:	6b5b883a 	add	r13,r13,r13
+   10798:	135b883a 	add	r13,r2,r13
+   1079c:	6b400003 	ldbu	r13,0(r13)
+   107a0:	6b5b883a 	add	r13,r13,r13
+   107a4:	6b5b883a 	add	r13,r13,r13
+   107a8:	435d883a 	add	r14,r8,r13
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+   107ac:	1b403fcc 	andi	r13,r3,255
+   107b0:	6b5b883a 	add	r13,r13,r13
+   107b4:	6b5b883a 	add	r13,r13,r13
+   107b8:	135b883a 	add	r13,r2,r13
+   107bc:	6b400003 	ldbu	r13,0(r13)
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+   107c0:	73800017 	ldw	r14,0(r14)
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+   107c4:	6b5b883a 	add	r13,r13,r13
+   107c8:	6b5b883a 	add	r13,r13,r13
+   107cc:	4b5b883a 	add	r13,r9,r13
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+   107d0:	6b400017 	ldw	r13,0(r13)
+   107d4:	735cf03a 	xor	r14,r14,r13
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   107d8:	181ad3ba 	srli	r13,r3,14
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   107dc:	1806d1ba 	srli	r3,r3,6
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   107e0:	6b40ff0c 	andi	r13,r13,1020
+   107e4:	135b883a 	add	r13,r2,r13
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   107e8:	18c0ff0c 	andi	r3,r3,1020
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   107ec:	6b400003 	ldbu	r13,0(r13)
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   107f0:	10c7883a 	add	r3,r2,r3
+   107f4:	18c00003 	ldbu	r3,0(r3)
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   107f8:	6b5b883a 	add	r13,r13,r13
+   107fc:	6b5b883a 	add	r13,r13,r13
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   10800:	18c7883a 	add	r3,r3,r3
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+   10804:	535b883a 	add	r13,r10,r13
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   10808:	18c7883a 	add	r3,r3,r3
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+   1080c:	6b400017 	ldw	r13,0(r13)
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+   10810:	58c7883a 	add	r3,r11,r3
+	temp = rk[i + 3]; rk[i + 3] = rk[j + 3]; rk[j + 3] = temp;
+    }
+    /* apply the inverse MixColumn transform to all round keys but the first and the last: */
+    for (i = 1; i < (key->rounds); i++) {
+	rk += 4;
+	rk[0] =
+   10814:	18c00017 	ldw	r3,0(r3)
+   10818:	735af03a 	xor	r13,r14,r13
+   1081c:	68c6f03a 	xor	r3,r13,r3
+   10820:	20c00015 	stw	r3,0(r4)
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+   10824:	28fffc17 	ldw	r3,-16(r5)
+   10828:	181ad63a 	srli	r13,r3,24
+   1082c:	6b5b883a 	add	r13,r13,r13
+   10830:	6b5b883a 	add	r13,r13,r13
+   10834:	135b883a 	add	r13,r2,r13
+   10838:	6b400003 	ldbu	r13,0(r13)
+   1083c:	6b5b883a 	add	r13,r13,r13
+   10840:	6b5b883a 	add	r13,r13,r13
+   10844:	435d883a 	add	r14,r8,r13
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+   10848:	1b403fcc 	andi	r13,r3,255
+   1084c:	6b5b883a 	add	r13,r13,r13
+   10850:	6b5b883a 	add	r13,r13,r13
+   10854:	135b883a 	add	r13,r2,r13
+   10858:	6b400003 	ldbu	r13,0(r13)
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+   1085c:	73800017 	ldw	r14,0(r14)
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+   10860:	6b5b883a 	add	r13,r13,r13
+   10864:	6b5b883a 	add	r13,r13,r13
+   10868:	4b5b883a 	add	r13,r9,r13
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+   1086c:	6b400017 	ldw	r13,0(r13)
+   10870:	735cf03a 	xor	r14,r14,r13
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+   10874:	181ad3ba 	srli	r13,r3,14
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   10878:	1806d1ba 	srli	r3,r3,6
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+   1087c:	6b40ff0c 	andi	r13,r13,1020
+   10880:	135b883a 	add	r13,r2,r13
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   10884:	18c0ff0c 	andi	r3,r3,1020
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+   10888:	6b400003 	ldbu	r13,0(r13)
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   1088c:	10c7883a 	add	r3,r2,r3
+   10890:	18c00003 	ldbu	r3,0(r3)
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+   10894:	6b5b883a 	add	r13,r13,r13
+   10898:	6b5b883a 	add	r13,r13,r13
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   1089c:	18c7883a 	add	r3,r3,r3
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+   108a0:	535b883a 	add	r13,r10,r13
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   108a4:	18c7883a 	add	r3,r3,r3
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+   108a8:	6b400017 	ldw	r13,0(r13)
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+   108ac:	58c7883a 	add	r3,r11,r3
+	rk[0] =
+	    Td0[Te4[(rk[0] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[0] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[0] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[0]      ) & 0xff] & 0xff];
+	rk[1] =
+   108b0:	18c00017 	ldw	r3,0(r3)
+   108b4:	735af03a 	xor	r13,r14,r13
+   108b8:	68c6f03a 	xor	r3,r13,r3
+   108bc:	28fffc15 	stw	r3,-16(r5)
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+   108c0:	30fffc17 	ldw	r3,-16(r6)
+   108c4:	181ad63a 	srli	r13,r3,24
+   108c8:	6b5b883a 	add	r13,r13,r13
+   108cc:	6b5b883a 	add	r13,r13,r13
+   108d0:	135b883a 	add	r13,r2,r13
+   108d4:	6b400003 	ldbu	r13,0(r13)
+   108d8:	6b5b883a 	add	r13,r13,r13
+   108dc:	6b5b883a 	add	r13,r13,r13
+   108e0:	435d883a 	add	r14,r8,r13
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+   108e4:	1b403fcc 	andi	r13,r3,255
+   108e8:	6b5b883a 	add	r13,r13,r13
+   108ec:	6b5b883a 	add	r13,r13,r13
+   108f0:	135b883a 	add	r13,r2,r13
+   108f4:	6b400003 	ldbu	r13,0(r13)
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+   108f8:	73800017 	ldw	r14,0(r14)
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+   108fc:	6b5b883a 	add	r13,r13,r13
+   10900:	6b5b883a 	add	r13,r13,r13
+   10904:	4b5b883a 	add	r13,r9,r13
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+   10908:	6b400017 	ldw	r13,0(r13)
+   1090c:	735cf03a 	xor	r14,r14,r13
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+   10910:	181ad3ba 	srli	r13,r3,14
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10914:	1806d1ba 	srli	r3,r3,6
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+   10918:	6b40ff0c 	andi	r13,r13,1020
+   1091c:	135b883a 	add	r13,r2,r13
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10920:	18c0ff0c 	andi	r3,r3,1020
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+   10924:	6b400003 	ldbu	r13,0(r13)
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10928:	10c7883a 	add	r3,r2,r3
+   1092c:	18c00003 	ldbu	r3,0(r3)
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+   10930:	6b5b883a 	add	r13,r13,r13
+   10934:	6b5b883a 	add	r13,r13,r13
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10938:	18c7883a 	add	r3,r3,r3
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+   1093c:	535b883a 	add	r13,r10,r13
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10940:	18c7883a 	add	r3,r3,r3
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+   10944:	6b400017 	ldw	r13,0(r13)
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+   10948:	58c7883a 	add	r3,r11,r3
+	rk[1] =
+	    Td0[Te4[(rk[1] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[1] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[1] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[1]      ) & 0xff] & 0xff];
+	rk[2] =
+   1094c:	18c00017 	ldw	r3,0(r3)
+   10950:	735af03a 	xor	r13,r14,r13
+   10954:	68c6f03a 	xor	r3,r13,r3
+   10958:	30fffc15 	stw	r3,-16(r6)
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+   1095c:	38fffc17 	ldw	r3,-16(r7)
+   10960:	181ad63a 	srli	r13,r3,24
+   10964:	6b5b883a 	add	r13,r13,r13
+   10968:	6b5b883a 	add	r13,r13,r13
+   1096c:	135b883a 	add	r13,r2,r13
+   10970:	6b400003 	ldbu	r13,0(r13)
+   10974:	6b5b883a 	add	r13,r13,r13
+   10978:	6b5b883a 	add	r13,r13,r13
+   1097c:	435d883a 	add	r14,r8,r13
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[3]      ) & 0xff] & 0xff];
+   10980:	1b403fcc 	andi	r13,r3,255
+   10984:	6b5b883a 	add	r13,r13,r13
+   10988:	6b5b883a 	add	r13,r13,r13
+   1098c:	135b883a 	add	r13,r2,r13
+   10990:	6b400003 	ldbu	r13,0(r13)
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+   10994:	73800017 	ldw	r14,0(r14)
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[3]      ) & 0xff] & 0xff];
+   10998:	6b5b883a 	add	r13,r13,r13
+   1099c:	6b5b883a 	add	r13,r13,r13
+   109a0:	4b5b883a 	add	r13,r9,r13
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+   109a4:	6b400017 	ldw	r13,0(r13)
+   109a8:	735cf03a 	xor	r14,r14,r13
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+   109ac:	181ad3ba 	srli	r13,r3,14
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109b0:	1806d1ba 	srli	r3,r3,6
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+   109b4:	6b40ff0c 	andi	r13,r13,1020
+   109b8:	135b883a 	add	r13,r2,r13
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109bc:	18c0ff0c 	andi	r3,r3,1020
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+   109c0:	6b400003 	ldbu	r13,0(r13)
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109c4:	10c7883a 	add	r3,r2,r3
+   109c8:	18c00003 	ldbu	r3,0(r3)
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+   109cc:	6b5b883a 	add	r13,r13,r13
+   109d0:	6b5b883a 	add	r13,r13,r13
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109d4:	18c7883a 	add	r3,r3,r3
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+   109d8:	535b883a 	add	r13,r10,r13
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109dc:	18c7883a 	add	r3,r3,r3
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+   109e0:	6b400017 	ldw	r13,0(r13)
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+   109e4:	58c7883a 	add	r3,r11,r3
+	rk[2] =
+	    Td0[Te4[(rk[2] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[2] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[2] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[2]      ) & 0xff] & 0xff];
+	rk[3] =
+   109e8:	18c00017 	ldw	r3,0(r3)
+   109ec:	735af03a 	xor	r13,r14,r13
+   109f0:	68c6f03a 	xor	r3,r13,r3
+   109f4:	38fffc15 	stw	r3,-16(r7)
+   109f8:	003f5c06 	br	1076c <__alt_data_end+0xffff076c>
+	    Td0[Te4[(rk[3] >> 24)       ] & 0xff] ^
+	    Td1[Te4[(rk[3] >> 16) & 0xff] & 0xff] ^
+	    Td2[Te4[(rk[3] >>  8) & 0xff] & 0xff] ^
+	    Td3[Te4[(rk[3]      ) & 0xff] & 0xff];
+    }
+    return 0;
+   109fc:	0005883a 	mov	r2,zero
+}
+   10a00:	dfc00117 	ldw	ra,4(sp)
+   10a04:	dc000017 	ldw	r16,0(sp)
+   10a08:	dec00204 	addi	sp,sp,8
+   10a0c:	f800283a 	ret
+
+00010a10 <AES_encrypt>:
+ * Encrypt a single block
+ * in and out can overlap
+ */
+void AES_encrypt(const unsigned char *in,
+		 unsigned char *out,
+		 const AES_KEY *key) {
+   10a10:	deffed04 	addi	sp,sp,-76
+   10a14:	dfc01215 	stw	ra,72(sp)
+   10a18:	df001115 	stw	fp,68(sp)
+   10a1c:	ddc01015 	stw	r23,64(sp)
+   10a20:	dd800f15 	stw	r22,60(sp)
+   10a24:	dd400e15 	stw	r21,56(sp)
+   10a28:	dd000d15 	stw	r20,52(sp)
+   10a2c:	dcc00c15 	stw	r19,48(sp)
+   10a30:	dc000915 	stw	r16,36(sp)
+   10a34:	dc800b15 	stw	r18,44(sp)
+   10a38:	dc400a15 	stw	r17,40(sp)
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10a3c:	20800003 	ldbu	r2,0(r4)
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+   10a40:	04000074 	movhi	r16,1
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+   10a44:	07c00074 	movhi	ra,1
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10a48:	100e963a 	slli	r7,r2,24
+   10a4c:	20800043 	ldbu	r2,1(r4)
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+   10a50:	03c00074 	movhi	r15,1
+            Te2[(s2 >>  8) & 0xff] ^
+   10a54:	03800074 	movhi	r14,1
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10a58:	1004943a 	slli	r2,r2,16
+   10a5c:	37000404 	addi	fp,r6,16
+   10a60:	35c00504 	addi	r23,r6,20
+   10a64:	3884f03a 	xor	r2,r7,r2
+   10a68:	21c000c3 	ldbu	r7,3(r4)
+   10a6c:	35800604 	addi	r22,r6,24
+   10a70:	35400704 	addi	r21,r6,28
+   10a74:	11cef03a 	xor	r7,r2,r7
+   10a78:	20800083 	ldbu	r2,2(r4)
+   10a7c:	34c00904 	addi	r19,r6,36
+
+    const u32 *rk;
+    u32 s0, s1, s2, s3, t0, t1, t2, t3;
+    int r;
+
+    rk = key->rd_key;
+   10a80:	3029883a 	mov	r20,r6
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10a84:	1004923a 	slli	r2,r2,8
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+   10a88:	8410a704 	addi	r16,r16,17052
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+   10a8c:	ffcda704 	addi	ra,ra,13980
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10a90:	3884f03a 	xor	r2,r7,r2
+   10a94:	31c00017 	ldw	r7,0(r6)
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+   10a98:	7bcfa704 	addi	r15,r15,16028
+            Te2[(s2 >>  8) & 0xff] ^
+   10a9c:	738ea704 	addi	r14,r14,15004
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   10aa0:	11cef03a 	xor	r7,r2,r7
+    s1 = GETU32(in +  4) ^ rk[1];
+   10aa4:	20800103 	ldbu	r2,4(r4)
+   10aa8:	1014963a 	slli	r10,r2,24
+   10aac:	20800143 	ldbu	r2,5(r4)
+   10ab0:	1004943a 	slli	r2,r2,16
+   10ab4:	5084f03a 	xor	r2,r10,r2
+   10ab8:	228001c3 	ldbu	r10,7(r4)
+   10abc:	1294f03a 	xor	r10,r2,r10
+   10ac0:	20800183 	ldbu	r2,6(r4)
+   10ac4:	1004923a 	slli	r2,r2,8
+   10ac8:	5084f03a 	xor	r2,r10,r2
+   10acc:	32800117 	ldw	r10,4(r6)
+   10ad0:	1294f03a 	xor	r10,r2,r10
+    s2 = GETU32(in +  8) ^ rk[2];
+   10ad4:	20800203 	ldbu	r2,8(r4)
+   10ad8:	1010963a 	slli	r8,r2,24
+   10adc:	20800243 	ldbu	r2,9(r4)
+   10ae0:	1004943a 	slli	r2,r2,16
+   10ae4:	4084f03a 	xor	r2,r8,r2
+   10ae8:	220002c3 	ldbu	r8,11(r4)
+   10aec:	1210f03a 	xor	r8,r2,r8
+   10af0:	20800283 	ldbu	r2,10(r4)
+   10af4:	1004923a 	slli	r2,r2,8
+   10af8:	4084f03a 	xor	r2,r8,r2
+   10afc:	32000217 	ldw	r8,8(r6)
+   10b00:	1210f03a 	xor	r8,r2,r8
+    s3 = GETU32(in + 12) ^ rk[3];
+   10b04:	20800303 	ldbu	r2,12(r4)
+   10b08:	1006963a 	slli	r3,r2,24
+   10b0c:	20800343 	ldbu	r2,13(r4)
+   10b10:	1004943a 	slli	r2,r2,16
+   10b14:	1884f03a 	xor	r2,r3,r2
+   10b18:	20c003c3 	ldbu	r3,15(r4)
+   10b1c:	10c6f03a 	xor	r3,r2,r3
+   10b20:	20800383 	ldbu	r2,14(r4)
+   10b24:	31000b04 	addi	r4,r6,44
+   10b28:	1004923a 	slli	r2,r2,8
+   10b2c:	1884f03a 	xor	r2,r3,r2
+   10b30:	30c00317 	ldw	r3,12(r6)
+   10b34:	10c6f03a 	xor	r3,r2,r3
+
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+   10b38:	30803c17 	ldw	r2,240(r6)
+   10b3c:	1005d07a 	srai	r2,r2,1
+   10b40:	d8800315 	stw	r2,12(sp)
+   10b44:	30800a04 	addi	r2,r6,40
+   10b48:	d8800215 	stw	r2,8(sp)
+   10b4c:	da400317 	ldw	r9,12(sp)
+   10b50:	d9000115 	stw	r4,4(sp)
+   10b54:	da400015 	stw	r9,0(sp)
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+   10b58:	3808d63a 	srli	r4,r7,24
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+   10b5c:	18803fcc 	andi	r2,r3,255
+   10b60:	1085883a 	add	r2,r2,r2
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+   10b64:	2109883a 	add	r4,r4,r4
+   10b68:	2109883a 	add	r4,r4,r4
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+   10b6c:	1085883a 	add	r2,r2,r2
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+   10b70:	8109883a 	add	r4,r16,r4
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+   10b74:	f885883a 	add	r2,ra,r2
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10b78:	10800017 	ldw	r2,0(r2)
+   10b7c:	21000017 	ldw	r4,0(r4)
+   10b80:	e4800017 	ldw	r18,0(fp)
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10b84:	bc400017 	ldw	r17,0(r23)
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10b88:	2088f03a 	xor	r4,r4,r2
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+   10b8c:	5004d3ba 	srli	r2,r10,14
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10b90:	24a4f03a 	xor	r18,r4,r18
+            Te1[(s0 >> 16) & 0xff] ^
+            Te2[(s1 >>  8) & 0xff] ^
+            Te3[(s2      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+   10b94:	a5000804 	addi	r20,r20,32
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+   10b98:	1080ff0c 	andi	r2,r2,1020
+   10b9c:	7885883a 	add	r2,r15,r2
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10ba0:	11000017 	ldw	r4,0(r2)
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+   10ba4:	4004d1ba 	srli	r2,r8,6
+   10ba8:	e7000804 	addi	fp,fp,32
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10bac:	9108f03a 	xor	r4,r18,r4
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+   10bb0:	1080ff0c 	andi	r2,r2,1020
+   10bb4:	7085883a 	add	r2,r14,r2
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10bb8:	14800017 	ldw	r18,0(r2)
+            rk[4];
+        t1 =
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+   10bbc:	38803fcc 	andi	r2,r7,255
+   10bc0:	1085883a 	add	r2,r2,r2
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   10bc4:	24a4f03a 	xor	r18,r4,r18
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+            Te0[(s1 >> 24)       ] ^
+   10bc8:	5008d63a 	srli	r4,r10,24
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+   10bcc:	1085883a 	add	r2,r2,r2
+   10bd0:	f885883a 	add	r2,ra,r2
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+            Te0[(s1 >> 24)       ] ^
+   10bd4:	2109883a 	add	r4,r4,r4
+   10bd8:	2109883a 	add	r4,r4,r4
+   10bdc:	8109883a 	add	r4,r16,r4
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10be0:	10800017 	ldw	r2,0(r2)
+   10be4:	21000017 	ldw	r4,0(r4)
+   10be8:	901ad63a 	srli	r13,r18,24
+   10bec:	bdc00804 	addi	r23,r23,32
+   10bf0:	2088f03a 	xor	r4,r4,r2
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+   10bf4:	4004d3ba 	srli	r2,r8,14
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10bf8:	2462f03a 	xor	r17,r4,r17
+   10bfc:	b5800804 	addi	r22,r22,32
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+   10c00:	1080ff0c 	andi	r2,r2,1020
+   10c04:	7885883a 	add	r2,r15,r2
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10c08:	11000017 	ldw	r4,0(r2)
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+   10c0c:	1804d1ba 	srli	r2,r3,6
+   10c10:	ad400804 	addi	r21,r21,32
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10c14:	8908f03a 	xor	r4,r17,r4
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+   10c18:	1080ff0c 	andi	r2,r2,1020
+   10c1c:	7085883a 	add	r2,r14,r2
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10c20:	14400017 	ldw	r17,0(r2)
+            rk[5];
+        t2 =
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+   10c24:	50803fcc 	andi	r2,r10,255
+   10c28:	1085883a 	add	r2,r2,r2
+            Te0[(s0 >> 24)       ] ^
+            Te1[(s1 >> 16) & 0xff] ^
+            Te2[(s2 >>  8) & 0xff] ^
+            Te3[(s3      ) & 0xff] ^
+            rk[4];
+        t1 =
+   10c2c:	2462f03a 	xor	r17,r4,r17
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Te0[(s2 >> 24)       ] ^
+   10c30:	4008d63a 	srli	r4,r8,24
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+   10c34:	1085883a 	add	r2,r2,r2
+   10c38:	f885883a 	add	r2,ra,r2
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Te0[(s2 >> 24)       ] ^
+   10c3c:	2109883a 	add	r4,r4,r4
+   10c40:	2109883a 	add	r4,r4,r4
+   10c44:	8109883a 	add	r4,r16,r4
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10c48:	21000017 	ldw	r4,0(r4)
+   10c4c:	10800017 	ldw	r2,0(r2)
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+            Te1[(s0 >> 16) & 0xff] ^
+            Te2[(s1 >>  8) & 0xff] ^
+            Te3[(s2      ) & 0xff] ^
+   10c50:	42003fcc 	andi	r8,r8,255
+   10c54:	4211883a 	add	r8,r8,r8
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10c58:	2084f03a 	xor	r2,r4,r2
+   10c5c:	b13ff817 	ldw	r4,-32(r22)
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+            Te1[(s0 >> 16) & 0xff] ^
+            Te2[(s1 >>  8) & 0xff] ^
+            Te3[(s2      ) & 0xff] ^
+   10c60:	4211883a 	add	r8,r8,r8
+   10c64:	fa11883a 	add	r8,ra,r8
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10c68:	1104f03a 	xor	r2,r2,r4
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+   10c6c:	1808d3ba 	srli	r4,r3,14
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+   10c70:	1806d63a 	srli	r3,r3,24
+            Te1[(s0 >> 16) & 0xff] ^
+            Te2[(s1 >>  8) & 0xff] ^
+   10c74:	5014d1ba 	srli	r10,r10,6
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+   10c78:	2100ff0c 	andi	r4,r4,1020
+   10c7c:	7909883a 	add	r4,r15,r4
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10c80:	21000017 	ldw	r4,0(r4)
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+   10c84:	18c7883a 	add	r3,r3,r3
+   10c88:	18c7883a 	add	r3,r3,r3
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10c8c:	1104f03a 	xor	r2,r2,r4
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+   10c90:	3808d1ba 	srli	r4,r7,6
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+   10c94:	80c7883a 	add	r3,r16,r3
+            Te1[(s0 >> 16) & 0xff] ^
+   10c98:	380ed3ba 	srli	r7,r7,14
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+   10c9c:	2100ff0c 	andi	r4,r4,1020
+   10ca0:	7109883a 	add	r4,r14,r4
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10ca4:	21000017 	ldw	r4,0(r4)
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Te0[(s3 >> 24)       ] ^
+            Te1[(s0 >> 16) & 0xff] ^
+   10ca8:	39c0ff0c 	andi	r7,r7,1020
+   10cac:	79cf883a 	add	r7,r15,r7
+            Te0[(s1 >> 24)       ] ^
+            Te1[(s2 >> 16) & 0xff] ^
+            Te2[(s3 >>  8) & 0xff] ^
+            Te3[(s0      ) & 0xff] ^
+            rk[5];
+        t2 =
+   10cb0:	1104f03a 	xor	r2,r2,r4
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+   10cb4:	19000017 	ldw	r4,0(r3)
+   10cb8:	40c00017 	ldw	r3,0(r8)
+            Te0[(s3 >> 24)       ] ^
+            Te1[(s0 >> 16) & 0xff] ^
+            Te2[(s1 >>  8) & 0xff] ^
+   10cbc:	5280ff0c 	andi	r10,r10,1020
+   10cc0:	7295883a 	add	r10,r14,r10
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+   10cc4:	20c6f03a 	xor	r3,r4,r3
+   10cc8:	a93ff817 	ldw	r4,-32(r21)
+   10ccc:	1016d23a 	srli	r11,r2,8
+   10cd0:	1012d63a 	srli	r9,r2,24
+   10cd4:	1906f03a 	xor	r3,r3,r4
+   10cd8:	39000017 	ldw	r4,0(r7)
+   10cdc:	dac00815 	stw	r11,32(sp)
+   10ce0:	880ed43a 	srli	r7,r17,16
+   10ce4:	1906f03a 	xor	r3,r3,r4
+   10ce8:	51000017 	ldw	r4,0(r10)
+            Te2[(s1 >>  8) & 0xff] ^
+            Te3[(s2      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+        if (--r == 0) {
+   10cec:	da800017 	ldw	r10,0(sp)
+   10cf0:	8816d63a 	srli	r11,r17,24
+            Te0[(s2 >> 24)       ] ^
+            Te1[(s3 >> 16) & 0xff] ^
+            Te2[(s0 >>  8) & 0xff] ^
+            Te3[(s1      ) & 0xff] ^
+            rk[6];
+        t3 =
+   10cf4:	1906f03a 	xor	r3,r3,r4
+   10cf8:	1008d43a 	srli	r4,r2,16
+            Te2[(s1 >>  8) & 0xff] ^
+            Te3[(s2      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+        if (--r == 0) {
+   10cfc:	52bfffc4 	addi	r10,r10,-1
+   10d00:	1810d23a 	srli	r8,r3,8
+   10d04:	d9000415 	stw	r4,16(sp)
+   10d08:	1808d43a 	srli	r4,r3,16
+   10d0c:	da800015 	stw	r10,0(sp)
+   10d10:	da000515 	stw	r8,20(sp)
+   10d14:	d9000615 	stw	r4,24(sp)
+   10d18:	9008d23a 	srli	r4,r18,8
+   10d1c:	1b003fcc 	andi	r12,r3,255
+   10d20:	92803fcc 	andi	r10,r18,255
+   10d24:	d9000715 	stw	r4,28(sp)
+   10d28:	d9000017 	ldw	r4,0(sp)
+   10d2c:	8a003fcc 	andi	r8,r17,255
+   10d30:	1806d63a 	srli	r3,r3,24
+   10d34:	10803fcc 	andi	r2,r2,255
+   10d38:	9024d43a 	srli	r18,r18,16
+   10d3c:	8822d23a 	srli	r17,r17,8
+   10d40:	20006926 	beq	r4,zero,10ee8 <AES_encrypt+0x4d8>
+            break;
+        }
+
+        s0 =
+            Te0[(t0 >> 24)       ] ^
+   10d44:	6b5b883a 	add	r13,r13,r13
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+   10d48:	6319883a 	add	r12,r12,r12
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+            Te0[(t0 >> 24)       ] ^
+   10d4c:	6b5b883a 	add	r13,r13,r13
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+   10d50:	6319883a 	add	r12,r12,r12
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+            Te0[(t0 >> 24)       ] ^
+   10d54:	835b883a 	add	r13,r16,r13
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+   10d58:	fb19883a 	add	r12,ra,r12
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10d5c:	63000017 	ldw	r12,0(r12)
+   10d60:	6b400017 	ldw	r13,0(r13)
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+   10d64:	39c03fcc 	andi	r7,r7,255
+   10d68:	39cf883a 	add	r7,r7,r7
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10d6c:	6b1af03a 	xor	r13,r13,r12
+   10d70:	a3000017 	ldw	r12,0(r20)
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+   10d74:	39cf883a 	add	r7,r7,r7
+   10d78:	79cf883a 	add	r7,r15,r7
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10d7c:	6b18f03a 	xor	r12,r13,r12
+   10d80:	3b400017 	ldw	r13,0(r7)
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+   10d84:	d9c00817 	ldw	r7,32(sp)
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Te0[(t1 >> 24)       ] ^
+   10d88:	5ad7883a 	add	r11,r11,r11
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+   10d8c:	5295883a 	add	r10,r10,r10
+        }
+
+        s0 =
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+   10d90:	39003fcc 	andi	r4,r7,255
+   10d94:	2109883a 	add	r4,r4,r4
+   10d98:	2109883a 	add	r4,r4,r4
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Te0[(t1 >> 24)       ] ^
+   10d9c:	5ad7883a 	add	r11,r11,r11
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+   10da0:	5295883a 	add	r10,r10,r10
+        }
+
+        s0 =
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+   10da4:	7109883a 	add	r4,r14,r4
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Te0[(t1 >> 24)       ] ^
+   10da8:	82d7883a 	add	r11,r16,r11
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+   10dac:	fa95883a 	add	r10,ra,r10
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10db0:	21c00017 	ldw	r7,0(r4)
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10db4:	52800017 	ldw	r10,0(r10)
+   10db8:	59000017 	ldw	r4,0(r11)
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+   10dbc:	dac00417 	ldw	r11,16(sp)
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10dc0:	6358f03a 	xor	r12,r12,r13
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10dc4:	2294f03a 	xor	r10,r4,r10
+   10dc8:	99000017 	ldw	r4,0(r19)
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   10dcc:	61cef03a 	xor	r7,r12,r7
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+   10dd0:	db000517 	ldw	r12,20(sp)
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10dd4:	5108f03a 	xor	r4,r10,r4
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+   10dd8:	5a803fcc 	andi	r10,r11,255
+   10ddc:	5295883a 	add	r10,r10,r10
+   10de0:	5295883a 	add	r10,r10,r10
+   10de4:	7a95883a 	add	r10,r15,r10
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10de8:	52800017 	ldw	r10,0(r10)
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Te0[(t2 >> 24)       ] ^
+   10dec:	4a53883a 	add	r9,r9,r9
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+   10df0:	4211883a 	add	r8,r8,r8
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10df4:	2294f03a 	xor	r10,r4,r10
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+   10df8:	61003fcc 	andi	r4,r12,255
+   10dfc:	2109883a 	add	r4,r4,r4
+   10e00:	2109883a 	add	r4,r4,r4
+   10e04:	7109883a 	add	r4,r14,r4
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10e08:	21000017 	ldw	r4,0(r4)
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Te0[(t2 >> 24)       ] ^
+   10e0c:	4a53883a 	add	r9,r9,r9
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+   10e10:	4211883a 	add	r8,r8,r8
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Te0[(t2 >> 24)       ] ^
+   10e14:	8253883a 	add	r9,r16,r9
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+   10e18:	fa11883a 	add	r8,ra,r8
+            Te0[(t0 >> 24)       ] ^
+            Te1[(t1 >> 16) & 0xff] ^
+            Te2[(t2 >>  8) & 0xff] ^
+            Te3[(t3      ) & 0xff] ^
+            rk[0];
+        s1 =
+   10e1c:	5114f03a 	xor	r10,r10,r4
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e20:	42000017 	ldw	r8,0(r8)
+   10e24:	49000017 	ldw	r4,0(r9)
+   10e28:	da400217 	ldw	r9,8(sp)
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+   10e2c:	dac00617 	ldw	r11,24(sp)
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e30:	2210f03a 	xor	r8,r4,r8
+   10e34:	49000017 	ldw	r4,0(r9)
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+   10e38:	db000717 	ldw	r12,28(sp)
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Te0[(t3 >> 24)       ] ^
+   10e3c:	18c7883a 	add	r3,r3,r3
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e40:	4108f03a 	xor	r4,r8,r4
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+   10e44:	5a003fcc 	andi	r8,r11,255
+   10e48:	4211883a 	add	r8,r8,r8
+   10e4c:	4211883a 	add	r8,r8,r8
+   10e50:	7a11883a 	add	r8,r15,r8
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e54:	42000017 	ldw	r8,0(r8)
+            rk[2];
+        s3 =
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+            Te3[(t2      ) & 0xff] ^
+   10e58:	1085883a 	add	r2,r2,r2
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Te0[(t3 >> 24)       ] ^
+   10e5c:	18c7883a 	add	r3,r3,r3
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e60:	2210f03a 	xor	r8,r4,r8
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+   10e64:	61003fcc 	andi	r4,r12,255
+   10e68:	2109883a 	add	r4,r4,r4
+   10e6c:	2109883a 	add	r4,r4,r4
+   10e70:	7109883a 	add	r4,r14,r4
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e74:	21000017 	ldw	r4,0(r4)
+            rk[2];
+        s3 =
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+            Te3[(t2      ) & 0xff] ^
+   10e78:	1085883a 	add	r2,r2,r2
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Te0[(t3 >> 24)       ] ^
+   10e7c:	80c7883a 	add	r3,r16,r3
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+            Te3[(t2      ) & 0xff] ^
+   10e80:	f885883a 	add	r2,ra,r2
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10e84:	18c00017 	ldw	r3,0(r3)
+            Te0[(t1 >> 24)       ] ^
+            Te1[(t2 >> 16) & 0xff] ^
+            Te2[(t3 >>  8) & 0xff] ^
+            Te3[(t0      ) & 0xff] ^
+            rk[1];
+        s2 =
+   10e88:	4110f03a 	xor	r8,r8,r4
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10e8c:	10800017 	ldw	r2,0(r2)
+   10e90:	d9000117 	ldw	r4,4(sp)
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+   10e94:	94803fcc 	andi	r18,r18,255
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10e98:	1884f03a 	xor	r2,r3,r2
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+   10e9c:	94a5883a 	add	r18,r18,r18
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10ea0:	20c00017 	ldw	r3,0(r4)
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+   10ea4:	94a5883a 	add	r18,r18,r18
+   10ea8:	7ca5883a 	add	r18,r15,r18
+            Te2[(t1 >>  8) & 0xff] ^
+   10eac:	8c403fcc 	andi	r17,r17,255
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10eb0:	10c6f03a 	xor	r3,r2,r3
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+   10eb4:	8c63883a 	add	r17,r17,r17
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10eb8:	90800017 	ldw	r2,0(r18)
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+   10ebc:	8c63883a 	add	r17,r17,r17
+   10ec0:	7463883a 	add	r17,r14,r17
+            Te0[(t2 >> 24)       ] ^
+            Te1[(t3 >> 16) & 0xff] ^
+            Te2[(t0 >>  8) & 0xff] ^
+            Te3[(t1      ) & 0xff] ^
+            rk[2];
+        s3 =
+   10ec4:	1884f03a 	xor	r2,r3,r2
+   10ec8:	88c00017 	ldw	r3,0(r17)
+   10ecc:	4a400804 	addi	r9,r9,32
+   10ed0:	21000804 	addi	r4,r4,32
+   10ed4:	10c6f03a 	xor	r3,r2,r3
+   10ed8:	9cc00804 	addi	r19,r19,32
+   10edc:	da400215 	stw	r9,8(sp)
+   10ee0:	d9000115 	stw	r4,4(sp)
+            Te0[(t3 >> 24)       ] ^
+            Te1[(t0 >> 16) & 0xff] ^
+            Te2[(t1 >>  8) & 0xff] ^
+            Te3[(t2      ) & 0xff] ^
+            rk[3];
+    }
+   10ee4:	003f1c06 	br	10b58 <__alt_data_end+0xffff0b58>
+   10ee8:	d9000317 	ldw	r4,12(sp)
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+   10eec:	6b5b883a 	add	r13,r13,r13
+   10ef0:	6b5b883a 	add	r13,r13,r13
+   10ef4:	201c917a 	slli	r14,r4,5
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+   10ef8:	6319883a 	add	r12,r12,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   10efc:	39c03fcc 	andi	r7,r7,255
+   10f00:	338d883a 	add	r6,r6,r14
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+   10f04:	03800074 	movhi	r14,1
+   10f08:	738ca704 	addi	r14,r14,12956
+   10f0c:	735b883a 	add	r13,r14,r13
+
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   10f10:	6b400017 	ldw	r13,0(r13)
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+   10f14:	6319883a 	add	r12,r12,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   10f18:	39cf883a 	add	r7,r7,r7
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+   10f1c:	7319883a 	add	r12,r14,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   10f20:	39cf883a 	add	r7,r7,r7
+
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   10f24:	6bffc02c 	andhi	r15,r13,65280
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   10f28:	71cf883a 	add	r7,r14,r7
+
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   10f2c:	63400003 	ldbu	r13,0(r12)
+   10f30:	39c00017 	ldw	r7,0(r7)
+   10f34:	33000017 	ldw	r12,0(r6)
+   10f38:	7b5af03a 	xor	r13,r15,r13
+   10f3c:	39c03fec 	andhi	r7,r7,255
+   10f40:	6b18f03a 	xor	r12,r13,r12
+   10f44:	61cef03a 	xor	r7,r12,r7
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+   10f48:	db000817 	ldw	r12,32(sp)
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+   10f4c:	5ad7883a 	add	r11,r11,r11
+   10f50:	5ad7883a 	add	r11,r11,r11
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+   10f54:	61003fcc 	andi	r4,r12,255
+   10f58:	2109883a 	add	r4,r4,r4
+   10f5c:	2109883a 	add	r4,r4,r4
+   10f60:	7109883a 	add	r4,r14,r4
+
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   10f64:	21000017 	ldw	r4,0(r4)
+    PUTU32(out     , s0);
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+   10f68:	5295883a 	add	r10,r10,r10
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+   10f6c:	72d7883a 	add	r11,r14,r11
+
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   10f70:	213fc00c 	andi	r4,r4,65280
+   10f74:	3908f03a 	xor	r4,r7,r4
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   10f78:	200ed63a 	srli	r7,r4,24
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+   10f7c:	5295883a 	add	r10,r10,r10
+   10f80:	7295883a 	add	r10,r14,r10
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   10f84:	29c00005 	stb	r7,0(r5)
+   10f88:	200ed43a 	srli	r7,r4,16
+   10f8c:	290000c5 	stb	r4,3(r5)
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+   10f90:	4a53883a 	add	r9,r9,r9
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   10f94:	29c00045 	stb	r7,1(r5)
+   10f98:	200ed23a 	srli	r7,r4,8
+    s1 =
+   10f9c:	51000003 	ldbu	r4,0(r10)
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+   10fa0:	4a53883a 	add	r9,r9,r9
+	(Te4[(t0 >> 24)       ] & 0xff000000) ^
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   10fa4:	29c00085 	stb	r7,2(r5)
+    s1 =
+   10fa8:	59c00017 	ldw	r7,0(r11)
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+   10fac:	4211883a 	add	r8,r8,r8
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+   10fb0:	7253883a 	add	r9,r14,r9
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   10fb4:	39ffc02c 	andhi	r7,r7,65280
+   10fb8:	390ef03a 	xor	r7,r7,r4
+   10fbc:	31000117 	ldw	r4,4(r6)
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+   10fc0:	4211883a 	add	r8,r8,r8
+   10fc4:	7211883a 	add	r8,r14,r8
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   10fc8:	3914f03a 	xor	r10,r7,r4
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+   10fcc:	d9c00417 	ldw	r7,16(sp)
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   10fd0:	dac00617 	ldw	r11,24(sp)
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+   10fd4:	db000717 	ldw	r12,28(sp)
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+   10fd8:	39003fcc 	andi	r4,r7,255
+   10fdc:	2109883a 	add	r4,r4,r4
+   10fe0:	2109883a 	add	r4,r4,r4
+   10fe4:	7109883a 	add	r4,r14,r4
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   10fe8:	21c00017 	ldw	r7,0(r4)
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+   10fec:	18c7883a 	add	r3,r3,r3
+   10ff0:	18c7883a 	add	r3,r3,r3
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   10ff4:	39c03fec 	andhi	r7,r7,255
+   10ff8:	51cef03a 	xor	r7,r10,r7
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+   10ffc:	da800517 	ldw	r10,20(sp)
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t2      ) & 0xff] & 0x000000ff) ^
+   11000:	1085883a 	add	r2,r2,r2
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+   11004:	70c7883a 	add	r3,r14,r3
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+   11008:	51003fcc 	andi	r4,r10,255
+   1100c:	2109883a 	add	r4,r4,r4
+   11010:	2109883a 	add	r4,r4,r4
+   11014:	7109883a 	add	r4,r14,r4
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11018:	21000017 	ldw	r4,0(r4)
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t2      ) & 0xff] & 0x000000ff) ^
+   1101c:	1085883a 	add	r2,r2,r2
+   11020:	7085883a 	add	r2,r14,r2
+	(Te4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11024:	213fc00c 	andi	r4,r4,65280
+   11028:	3908f03a 	xor	r4,r7,r4
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   1102c:	200ed63a 	srli	r7,r4,24
+   11030:	290001c5 	stb	r4,7(r5)
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+   11034:	94803fcc 	andi	r18,r18,255
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11038:	29c00105 	stb	r7,4(r5)
+   1103c:	200ed43a 	srli	r7,r4,16
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+   11040:	94a5883a 	add	r18,r18,r18
+   11044:	94a5883a 	add	r18,r18,r18
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11048:	29c00145 	stb	r7,5(r5)
+   1104c:	200ed23a 	srli	r7,r4,8
+    s2 =
+   11050:	41000003 	ldbu	r4,0(r8)
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+   11054:	74a5883a 	add	r18,r14,r18
+	(Te4[(t1 >> 24)       ] & 0xff000000) ^
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11058:	29c00185 	stb	r7,6(r5)
+    s2 =
+   1105c:	49c00017 	ldw	r7,0(r9)
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   11060:	8c403fcc 	andi	r17,r17,255
+   11064:	8c63883a 	add	r17,r17,r17
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   11068:	39ffc02c 	andhi	r7,r7,65280
+   1106c:	390ef03a 	xor	r7,r7,r4
+   11070:	31000217 	ldw	r4,8(r6)
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   11074:	8c63883a 	add	r17,r17,r17
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   11078:	3910f03a 	xor	r8,r7,r4
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   1107c:	59003fcc 	andi	r4,r11,255
+   11080:	2109883a 	add	r4,r4,r4
+   11084:	2109883a 	add	r4,r4,r4
+   11088:	7109883a 	add	r4,r14,r4
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   1108c:	21c00017 	ldw	r7,0(r4)
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+   11090:	61003fcc 	andi	r4,r12,255
+   11094:	2109883a 	add	r4,r4,r4
+   11098:	2109883a 	add	r4,r4,r4
+   1109c:	7109883a 	add	r4,r14,r4
+	(Te4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   110a0:	21000017 	ldw	r4,0(r4)
+   110a4:	39c03fec 	andhi	r7,r7,255
+   110a8:	41cef03a 	xor	r7,r8,r7
+   110ac:	213fc00c 	andi	r4,r4,65280
+   110b0:	3908f03a 	xor	r4,r7,r4
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+   110b4:	200ed63a 	srli	r7,r4,24
+    s3 =
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   110b8:	745d883a 	add	r14,r14,r17
+	(Te4[(t2 >> 24)       ] & 0xff000000) ^
+	(Te4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+   110bc:	29c00205 	stb	r7,8(r5)
+   110c0:	200ed43a 	srli	r7,r4,16
+   110c4:	29c00245 	stb	r7,9(r5)
+   110c8:	200ed23a 	srli	r7,r4,8
+   110cc:	29c00285 	stb	r7,10(r5)
+   110d0:	290002c5 	stb	r4,11(r5)
+    s3 =
+   110d4:	19000017 	ldw	r4,0(r3)
+   110d8:	10c00003 	ldbu	r3,0(r2)
+   110dc:	213fc02c 	andhi	r4,r4,65280
+   110e0:	20c4f03a 	xor	r2,r4,r3
+   110e4:	31000317 	ldw	r4,12(r6)
+   110e8:	90c00017 	ldw	r3,0(r18)
+   110ec:	1104f03a 	xor	r2,r2,r4
+   110f0:	18c03fec 	andhi	r3,r3,255
+   110f4:	10c6f03a 	xor	r3,r2,r3
+   110f8:	70800017 	ldw	r2,0(r14)
+   110fc:	10bfc00c 	andi	r2,r2,65280
+   11100:	1884f03a 	xor	r2,r3,r2
+	(Te4[(t3 >> 24)       ] & 0xff000000) ^
+	(Te4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Te4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Te4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[3];
+    PUTU32(out + 12, s3);
+   11104:	1006d63a 	srli	r3,r2,24
+   11108:	288003c5 	stb	r2,15(r5)
+   1110c:	28c00305 	stb	r3,12(r5)
+   11110:	1006d43a 	srli	r3,r2,16
+   11114:	28c00345 	stb	r3,13(r5)
+   11118:	1006d23a 	srli	r3,r2,8
+   1111c:	28c00385 	stb	r3,14(r5)
+}
+   11120:	dfc01217 	ldw	ra,72(sp)
+   11124:	df001117 	ldw	fp,68(sp)
+   11128:	ddc01017 	ldw	r23,64(sp)
+   1112c:	dd800f17 	ldw	r22,60(sp)
+   11130:	dd400e17 	ldw	r21,56(sp)
+   11134:	dd000d17 	ldw	r20,52(sp)
+   11138:	dcc00c17 	ldw	r19,48(sp)
+   1113c:	dc800b17 	ldw	r18,44(sp)
+   11140:	dc400a17 	ldw	r17,40(sp)
+   11144:	dc000917 	ldw	r16,36(sp)
+   11148:	dec01304 	addi	sp,sp,76
+   1114c:	f800283a 	ret
+
+00011150 <AES_decrypt>:
+ * Decrypt a single block
+ * in and out can overlap
+ */
+void AES_decrypt(const unsigned char *in,
+		 unsigned char *out,
+		 const AES_KEY *key) {
+   11150:	deffed04 	addi	sp,sp,-76
+   11154:	dfc01215 	stw	ra,72(sp)
+   11158:	df001115 	stw	fp,68(sp)
+   1115c:	ddc01015 	stw	r23,64(sp)
+   11160:	dd800f15 	stw	r22,60(sp)
+   11164:	dd400e15 	stw	r21,56(sp)
+   11168:	dd000d15 	stw	r20,52(sp)
+   1116c:	dcc00c15 	stw	r19,48(sp)
+   11170:	dc000915 	stw	r16,36(sp)
+   11174:	dc800b15 	stw	r18,44(sp)
+   11178:	dc400a15 	stw	r17,40(sp)
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   1117c:	20800003 	ldbu	r2,0(r4)
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+   11180:	04000074 	movhi	r16,1
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+   11184:	07c00074 	movhi	ra,1
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   11188:	100e963a 	slli	r7,r2,24
+   1118c:	20800043 	ldbu	r2,1(r4)
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+   11190:	03c00074 	movhi	r15,1
+            Td2[(s2 >>  8) & 0xff] ^
+   11194:	03800074 	movhi	r14,1
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   11198:	1004943a 	slli	r2,r2,16
+   1119c:	37000404 	addi	fp,r6,16
+   111a0:	35c00504 	addi	r23,r6,20
+   111a4:	3884f03a 	xor	r2,r7,r2
+   111a8:	21c000c3 	ldbu	r7,3(r4)
+   111ac:	35800604 	addi	r22,r6,24
+   111b0:	35400704 	addi	r21,r6,28
+   111b4:	11cef03a 	xor	r7,r2,r7
+   111b8:	20800083 	ldbu	r2,2(r4)
+   111bc:	34c00904 	addi	r19,r6,36
+
+    const u32 *rk;
+    u32 s0, s1, s2, s3, t0, t1, t2, t3;
+    int r;
+
+    rk = key->rd_key;
+   111c0:	3029883a 	mov	r20,r6
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   111c4:	1004923a 	slli	r2,r2,8
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+   111c8:	840ba704 	addi	r16,r16,11932
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+   111cc:	ffc8a704 	addi	ra,ra,8860
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   111d0:	3884f03a 	xor	r2,r7,r2
+   111d4:	31c00017 	ldw	r7,0(r6)
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+   111d8:	7bcaa704 	addi	r15,r15,10908
+            Td2[(s2 >>  8) & 0xff] ^
+   111dc:	7389a704 	addi	r14,r14,9884
+
+    /*
+     * map byte array block to cipher state
+     * and add initial round key:
+     */
+    s0 = GETU32(in     ) ^ rk[0];
+   111e0:	11cef03a 	xor	r7,r2,r7
+    s1 = GETU32(in +  4) ^ rk[1];
+   111e4:	20800103 	ldbu	r2,4(r4)
+   111e8:	1014963a 	slli	r10,r2,24
+   111ec:	20800143 	ldbu	r2,5(r4)
+   111f0:	1004943a 	slli	r2,r2,16
+   111f4:	5084f03a 	xor	r2,r10,r2
+   111f8:	228001c3 	ldbu	r10,7(r4)
+   111fc:	1294f03a 	xor	r10,r2,r10
+   11200:	20800183 	ldbu	r2,6(r4)
+   11204:	1004923a 	slli	r2,r2,8
+   11208:	5084f03a 	xor	r2,r10,r2
+   1120c:	32800117 	ldw	r10,4(r6)
+   11210:	1294f03a 	xor	r10,r2,r10
+    s2 = GETU32(in +  8) ^ rk[2];
+   11214:	20800203 	ldbu	r2,8(r4)
+   11218:	1010963a 	slli	r8,r2,24
+   1121c:	20800243 	ldbu	r2,9(r4)
+   11220:	1004943a 	slli	r2,r2,16
+   11224:	4084f03a 	xor	r2,r8,r2
+   11228:	220002c3 	ldbu	r8,11(r4)
+   1122c:	1210f03a 	xor	r8,r2,r8
+   11230:	20800283 	ldbu	r2,10(r4)
+   11234:	1004923a 	slli	r2,r2,8
+   11238:	4084f03a 	xor	r2,r8,r2
+   1123c:	32000217 	ldw	r8,8(r6)
+   11240:	1210f03a 	xor	r8,r2,r8
+    s3 = GETU32(in + 12) ^ rk[3];
+   11244:	20800303 	ldbu	r2,12(r4)
+   11248:	1006963a 	slli	r3,r2,24
+   1124c:	20800343 	ldbu	r2,13(r4)
+   11250:	1004943a 	slli	r2,r2,16
+   11254:	1884f03a 	xor	r2,r3,r2
+   11258:	20c003c3 	ldbu	r3,15(r4)
+   1125c:	10c6f03a 	xor	r3,r2,r3
+   11260:	20800383 	ldbu	r2,14(r4)
+   11264:	31000b04 	addi	r4,r6,44
+   11268:	1004923a 	slli	r2,r2,8
+   1126c:	1884f03a 	xor	r2,r3,r2
+   11270:	30c00317 	ldw	r3,12(r6)
+   11274:	10c6f03a 	xor	r3,r2,r3
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+   11278:	30803c17 	ldw	r2,240(r6)
+   1127c:	1005d07a 	srai	r2,r2,1
+   11280:	d8800315 	stw	r2,12(sp)
+   11284:	30800a04 	addi	r2,r6,40
+   11288:	d8800215 	stw	r2,8(sp)
+   1128c:	da400317 	ldw	r9,12(sp)
+   11290:	d9000115 	stw	r4,4(sp)
+   11294:	da400015 	stw	r9,0(sp)
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+   11298:	3808d63a 	srli	r4,r7,24
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+   1129c:	50803fcc 	andi	r2,r10,255
+   112a0:	1085883a 	add	r2,r2,r2
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+   112a4:	2109883a 	add	r4,r4,r4
+   112a8:	2109883a 	add	r4,r4,r4
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+   112ac:	1085883a 	add	r2,r2,r2
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+   112b0:	8109883a 	add	r4,r16,r4
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+   112b4:	f885883a 	add	r2,ra,r2
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   112b8:	21000017 	ldw	r4,0(r4)
+   112bc:	10800017 	ldw	r2,0(r2)
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+            Td0[(s1 >> 24)       ] ^
+   112c0:	5012d63a 	srli	r9,r10,24
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   112c4:	bc400017 	ldw	r17,0(r23)
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   112c8:	2084f03a 	xor	r2,r4,r2
+   112cc:	e1000017 	ldw	r4,0(fp)
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+            Td0[(s1 >> 24)       ] ^
+   112d0:	4a53883a 	add	r9,r9,r9
+   112d4:	4a53883a 	add	r9,r9,r9
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   112d8:	1104f03a 	xor	r2,r2,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+   112dc:	1808d3ba 	srli	r4,r3,14
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+            Td0[(s1 >> 24)       ] ^
+   112e0:	8253883a 	add	r9,r16,r9
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   112e4:	4a400017 	ldw	r9,0(r9)
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+   112e8:	2100ff0c 	andi	r4,r4,1020
+   112ec:	7909883a 	add	r4,r15,r4
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   112f0:	21000017 	ldw	r4,0(r4)
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+   112f4:	a5000804 	addi	r20,r20,32
+   112f8:	e7000804 	addi	fp,fp,32
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   112fc:	1104f03a 	xor	r2,r2,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+   11300:	4008d1ba 	srli	r4,r8,6
+   11304:	bdc00804 	addi	r23,r23,32
+   11308:	b5800804 	addi	r22,r22,32
+   1130c:	2100ff0c 	andi	r4,r4,1020
+   11310:	7109883a 	add	r4,r14,r4
+    /*
+     * Nr - 1 full rounds:
+     */
+    r = key->rounds >> 1;
+    for (;;) {
+        t0 =
+   11314:	21000017 	ldw	r4,0(r4)
+   11318:	ad400804 	addi	r21,r21,32
+   1131c:	1104f03a 	xor	r2,r2,r4
+            rk[4];
+        t1 =
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+   11320:	41003fcc 	andi	r4,r8,255
+   11324:	2109883a 	add	r4,r4,r4
+   11328:	2109883a 	add	r4,r4,r4
+   1132c:	f909883a 	add	r4,ra,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   11330:	21000017 	ldw	r4,0(r4)
+   11334:	101ad63a 	srli	r13,r2,24
+   11338:	4912f03a 	xor	r9,r9,r4
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+   1133c:	3808d3ba 	srli	r4,r7,14
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   11340:	4c62f03a 	xor	r17,r9,r17
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+   11344:	2100ff0c 	andi	r4,r4,1020
+   11348:	7909883a 	add	r4,r15,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   1134c:	22400017 	ldw	r9,0(r4)
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+   11350:	1808d1ba 	srli	r4,r3,6
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   11354:	8a52f03a 	xor	r9,r17,r9
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+   11358:	2100ff0c 	andi	r4,r4,1020
+   1135c:	7109883a 	add	r4,r14,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   11360:	24400017 	ldw	r17,0(r4)
+            rk[5];
+        t2 =
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+   11364:	19003fcc 	andi	r4,r3,255
+   11368:	2109883a 	add	r4,r4,r4
+            Td0[(s0 >> 24)       ] ^
+            Td1[(s3 >> 16) & 0xff] ^
+            Td2[(s2 >>  8) & 0xff] ^
+            Td3[(s1      ) & 0xff] ^
+            rk[4];
+        t1 =
+   1136c:	4c62f03a 	xor	r17,r9,r17
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Td0[(s2 >> 24)       ] ^
+   11370:	4012d63a 	srli	r9,r8,24
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+   11374:	2109883a 	add	r4,r4,r4
+   11378:	f909883a 	add	r4,ra,r4
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Td0[(s2 >> 24)       ] ^
+   1137c:	4a53883a 	add	r9,r9,r9
+   11380:	4a53883a 	add	r9,r9,r9
+   11384:	8253883a 	add	r9,r16,r9
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+   11388:	24800017 	ldw	r18,0(r4)
+   1138c:	4a400017 	ldw	r9,0(r9)
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+   11390:	5008d3ba 	srli	r4,r10,14
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Td0[(s3 >> 24)       ] ^
+   11394:	1806d63a 	srli	r3,r3,24
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+   11398:	4c92f03a 	xor	r9,r9,r18
+   1139c:	b4bff817 	ldw	r18,-32(r22)
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+   113a0:	2100ff0c 	andi	r4,r4,1020
+   113a4:	7909883a 	add	r4,r15,r4
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+   113a8:	4ca4f03a 	xor	r18,r9,r18
+   113ac:	22400017 	ldw	r9,0(r4)
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+   113b0:	3808d1ba 	srli	r4,r7,6
+            rk[6];
+        t3 =
+            Td0[(s3 >> 24)       ] ^
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+   113b4:	39c03fcc 	andi	r7,r7,255
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Td0[(s3 >> 24)       ] ^
+   113b8:	18c7883a 	add	r3,r3,r3
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+   113bc:	39cf883a 	add	r7,r7,r7
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+   113c0:	2100ff0c 	andi	r4,r4,1020
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Td0[(s3 >> 24)       ] ^
+   113c4:	18c7883a 	add	r3,r3,r3
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+   113c8:	39cf883a 	add	r7,r7,r7
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+   113cc:	7109883a 	add	r4,r14,r4
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+            Td0[(s3 >> 24)       ] ^
+   113d0:	80c7883a 	add	r3,r16,r3
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+   113d4:	f9cf883a 	add	r7,ra,r7
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+   113d8:	9252f03a 	xor	r9,r18,r9
+   113dc:	24800017 	ldw	r18,0(r4)
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+   113e0:	19000017 	ldw	r4,0(r3)
+   113e4:	38c00017 	ldw	r3,0(r7)
+            Td0[(s3 >> 24)       ] ^
+            Td1[(s2 >> 16) & 0xff] ^
+   113e8:	4010d3ba 	srli	r8,r8,14
+            Td2[(s1 >>  8) & 0xff] ^
+   113ec:	5014d1ba 	srli	r10,r10,6
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+   113f0:	20c6f03a 	xor	r3,r4,r3
+   113f4:	a93ff817 	ldw	r4,-32(r21)
+            Td0[(s3 >> 24)       ] ^
+            Td1[(s2 >> 16) & 0xff] ^
+   113f8:	4200ff0c 	andi	r8,r8,1020
+   113fc:	7a11883a 	add	r8,r15,r8
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+   11400:	1906f03a 	xor	r3,r3,r4
+   11404:	41000017 	ldw	r4,0(r8)
+            Td0[(s3 >> 24)       ] ^
+            Td1[(s2 >> 16) & 0xff] ^
+            Td2[(s1 >>  8) & 0xff] ^
+   11408:	5280ff0c 	andi	r10,r10,1020
+   1140c:	7295883a 	add	r10,r14,r10
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+   11410:	1906f03a 	xor	r3,r3,r4
+   11414:	51000017 	ldw	r4,0(r10)
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+        if (--r == 0) {
+   11418:	da800017 	ldw	r10,0(sp)
+            Td0[(s1 >> 24)       ] ^
+            Td1[(s0 >> 16) & 0xff] ^
+            Td2[(s3 >>  8) & 0xff] ^
+            Td3[(s2      ) & 0xff] ^
+            rk[5];
+        t2 =
+   1141c:	4ca4f03a 	xor	r18,r9,r18
+            Td0[(s2 >> 24)       ] ^
+            Td1[(s1 >> 16) & 0xff] ^
+            Td2[(s0 >>  8) & 0xff] ^
+            Td3[(s3      ) & 0xff] ^
+            rk[6];
+        t3 =
+   11420:	1906f03a 	xor	r3,r3,r4
+   11424:	1008d43a 	srli	r4,r2,16
+            Td2[(s1 >>  8) & 0xff] ^
+            Td3[(s0      ) & 0xff] ^
+            rk[7];
+
+        rk += 8;
+        if (--r == 0) {
+   11428:	52bfffc4 	addi	r10,r10,-1
+   1142c:	9016d23a 	srli	r11,r18,8
+   11430:	d9000415 	stw	r4,16(sp)
+   11434:	8808d43a 	srli	r4,r17,16
+   11438:	1810d23a 	srli	r8,r3,8
+   1143c:	da800015 	stw	r10,0(sp)
+   11440:	d9000615 	stw	r4,24(sp)
+   11444:	1008d23a 	srli	r4,r2,8
+   11448:	dac00815 	stw	r11,32(sp)
+   1144c:	da000515 	stw	r8,20(sp)
+   11450:	d9000715 	stw	r4,28(sp)
+   11454:	d9000017 	ldw	r4,0(sp)
+   11458:	8b003fcc 	andi	r12,r17,255
+   1145c:	180ed43a 	srli	r7,r3,16
+   11460:	8816d63a 	srli	r11,r17,24
+   11464:	92803fcc 	andi	r10,r18,255
+   11468:	9012d63a 	srli	r9,r18,24
+   1146c:	1a003fcc 	andi	r8,r3,255
+   11470:	10803fcc 	andi	r2,r2,255
+   11474:	1806d63a 	srli	r3,r3,24
+   11478:	9024d43a 	srli	r18,r18,16
+   1147c:	8822d23a 	srli	r17,r17,8
+   11480:	20006926 	beq	r4,zero,11628 <AES_decrypt+0x4d8>
+            break;
+        }
+
+        s0 =
+            Td0[(t0 >> 24)       ] ^
+   11484:	6b5b883a 	add	r13,r13,r13
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+   11488:	6319883a 	add	r12,r12,r12
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+            Td0[(t0 >> 24)       ] ^
+   1148c:	6b5b883a 	add	r13,r13,r13
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+   11490:	6319883a 	add	r12,r12,r12
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+            Td0[(t0 >> 24)       ] ^
+   11494:	835b883a 	add	r13,r16,r13
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+   11498:	fb19883a 	add	r12,ra,r12
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   1149c:	63000017 	ldw	r12,0(r12)
+   114a0:	6b400017 	ldw	r13,0(r13)
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+   114a4:	39c03fcc 	andi	r7,r7,255
+   114a8:	39cf883a 	add	r7,r7,r7
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   114ac:	6b1af03a 	xor	r13,r13,r12
+   114b0:	a3000017 	ldw	r12,0(r20)
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+   114b4:	39cf883a 	add	r7,r7,r7
+   114b8:	79cf883a 	add	r7,r15,r7
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   114bc:	6b18f03a 	xor	r12,r13,r12
+   114c0:	3b400017 	ldw	r13,0(r7)
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+   114c4:	d9c00817 	ldw	r7,32(sp)
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Td0[(t1 >> 24)       ] ^
+   114c8:	5ad7883a 	add	r11,r11,r11
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+   114cc:	5295883a 	add	r10,r10,r10
+        }
+
+        s0 =
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+   114d0:	39003fcc 	andi	r4,r7,255
+   114d4:	2109883a 	add	r4,r4,r4
+   114d8:	2109883a 	add	r4,r4,r4
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Td0[(t1 >> 24)       ] ^
+   114dc:	5ad7883a 	add	r11,r11,r11
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+   114e0:	5295883a 	add	r10,r10,r10
+        }
+
+        s0 =
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+   114e4:	7109883a 	add	r4,r14,r4
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Td0[(t1 >> 24)       ] ^
+   114e8:	82d7883a 	add	r11,r16,r11
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+   114ec:	fa95883a 	add	r10,ra,r10
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   114f0:	21c00017 	ldw	r7,0(r4)
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   114f4:	52800017 	ldw	r10,0(r10)
+   114f8:	59000017 	ldw	r4,0(r11)
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+   114fc:	dac00417 	ldw	r11,16(sp)
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   11500:	6358f03a 	xor	r12,r12,r13
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   11504:	2294f03a 	xor	r10,r4,r10
+   11508:	99000017 	ldw	r4,0(r19)
+        rk += 8;
+        if (--r == 0) {
+            break;
+        }
+
+        s0 =
+   1150c:	61cef03a 	xor	r7,r12,r7
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+   11510:	db000517 	ldw	r12,20(sp)
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   11514:	5108f03a 	xor	r4,r10,r4
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+   11518:	5a803fcc 	andi	r10,r11,255
+   1151c:	5295883a 	add	r10,r10,r10
+   11520:	5295883a 	add	r10,r10,r10
+   11524:	7a95883a 	add	r10,r15,r10
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   11528:	52800017 	ldw	r10,0(r10)
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Td0[(t2 >> 24)       ] ^
+   1152c:	4a53883a 	add	r9,r9,r9
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+   11530:	4211883a 	add	r8,r8,r8
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   11534:	2294f03a 	xor	r10,r4,r10
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+   11538:	61003fcc 	andi	r4,r12,255
+   1153c:	2109883a 	add	r4,r4,r4
+   11540:	2109883a 	add	r4,r4,r4
+   11544:	7109883a 	add	r4,r14,r4
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   11548:	21000017 	ldw	r4,0(r4)
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Td0[(t2 >> 24)       ] ^
+   1154c:	4a53883a 	add	r9,r9,r9
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+   11550:	4211883a 	add	r8,r8,r8
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+            Td0[(t2 >> 24)       ] ^
+   11554:	8253883a 	add	r9,r16,r9
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+   11558:	fa11883a 	add	r8,ra,r8
+            Td0[(t0 >> 24)       ] ^
+            Td1[(t3 >> 16) & 0xff] ^
+            Td2[(t2 >>  8) & 0xff] ^
+            Td3[(t1      ) & 0xff] ^
+            rk[0];
+        s1 =
+   1155c:	5114f03a 	xor	r10,r10,r4
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   11560:	42000017 	ldw	r8,0(r8)
+   11564:	49000017 	ldw	r4,0(r9)
+   11568:	da400217 	ldw	r9,8(sp)
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+   1156c:	dac00617 	ldw	r11,24(sp)
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   11570:	2210f03a 	xor	r8,r4,r8
+   11574:	49000017 	ldw	r4,0(r9)
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+   11578:	db000717 	ldw	r12,28(sp)
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Td0[(t3 >> 24)       ] ^
+   1157c:	18c7883a 	add	r3,r3,r3
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   11580:	4108f03a 	xor	r4,r8,r4
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+   11584:	5a003fcc 	andi	r8,r11,255
+   11588:	4211883a 	add	r8,r8,r8
+   1158c:	4211883a 	add	r8,r8,r8
+   11590:	7a11883a 	add	r8,r15,r8
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   11594:	42000017 	ldw	r8,0(r8)
+            rk[2];
+        s3 =
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+            Td3[(t0      ) & 0xff] ^
+   11598:	1085883a 	add	r2,r2,r2
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Td0[(t3 >> 24)       ] ^
+   1159c:	18c7883a 	add	r3,r3,r3
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   115a0:	2210f03a 	xor	r8,r4,r8
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+   115a4:	61003fcc 	andi	r4,r12,255
+   115a8:	2109883a 	add	r4,r4,r4
+   115ac:	2109883a 	add	r4,r4,r4
+   115b0:	7109883a 	add	r4,r14,r4
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   115b4:	21000017 	ldw	r4,0(r4)
+            rk[2];
+        s3 =
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+            Td3[(t0      ) & 0xff] ^
+   115b8:	1085883a 	add	r2,r2,r2
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+            Td0[(t3 >> 24)       ] ^
+   115bc:	80c7883a 	add	r3,r16,r3
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+            Td3[(t0      ) & 0xff] ^
+   115c0:	f885883a 	add	r2,ra,r2
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115c4:	18c00017 	ldw	r3,0(r3)
+            Td0[(t1 >> 24)       ] ^
+            Td1[(t0 >> 16) & 0xff] ^
+            Td2[(t3 >>  8) & 0xff] ^
+            Td3[(t2      ) & 0xff] ^
+            rk[1];
+        s2 =
+   115c8:	4110f03a 	xor	r8,r8,r4
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115cc:	10800017 	ldw	r2,0(r2)
+   115d0:	d9000117 	ldw	r4,4(sp)
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+   115d4:	94803fcc 	andi	r18,r18,255
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115d8:	1884f03a 	xor	r2,r3,r2
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+   115dc:	94a5883a 	add	r18,r18,r18
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115e0:	20c00017 	ldw	r3,0(r4)
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+   115e4:	94a5883a 	add	r18,r18,r18
+   115e8:	7ca5883a 	add	r18,r15,r18
+            Td2[(t1 >>  8) & 0xff] ^
+   115ec:	8c403fcc 	andi	r17,r17,255
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115f0:	10c6f03a 	xor	r3,r2,r3
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+   115f4:	8c63883a 	add	r17,r17,r17
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   115f8:	90800017 	ldw	r2,0(r18)
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+   115fc:	8c63883a 	add	r17,r17,r17
+   11600:	7463883a 	add	r17,r14,r17
+            Td0[(t2 >> 24)       ] ^
+            Td1[(t1 >> 16) & 0xff] ^
+            Td2[(t0 >>  8) & 0xff] ^
+            Td3[(t3      ) & 0xff] ^
+            rk[2];
+        s3 =
+   11604:	1884f03a 	xor	r2,r3,r2
+   11608:	88c00017 	ldw	r3,0(r17)
+   1160c:	4a400804 	addi	r9,r9,32
+   11610:	21000804 	addi	r4,r4,32
+   11614:	10c6f03a 	xor	r3,r2,r3
+   11618:	9cc00804 	addi	r19,r19,32
+   1161c:	da400215 	stw	r9,8(sp)
+   11620:	d9000115 	stw	r4,4(sp)
+            Td0[(t3 >> 24)       ] ^
+            Td1[(t2 >> 16) & 0xff] ^
+            Td2[(t1 >>  8) & 0xff] ^
+            Td3[(t0      ) & 0xff] ^
+            rk[3];
+    }
+   11624:	003f1c06 	br	11298 <__alt_data_end+0xffff1298>
+   11628:	d9000317 	ldw	r4,12(sp)
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+   1162c:	6b5b883a 	add	r13,r13,r13
+   11630:	6b5b883a 	add	r13,r13,r13
+   11634:	201c917a 	slli	r14,r4,5
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+   11638:	6319883a 	add	r12,r12,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   1163c:	39c03fcc 	andi	r7,r7,255
+   11640:	338d883a 	add	r6,r6,r14
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+   11644:	03800074 	movhi	r14,1
+   11648:	7387a704 	addi	r14,r14,7836
+   1164c:	735b883a 	add	r13,r14,r13
+    }
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   11650:	6b400017 	ldw	r13,0(r13)
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+   11654:	6319883a 	add	r12,r12,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   11658:	39cf883a 	add	r7,r7,r7
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+   1165c:	7319883a 	add	r12,r14,r12
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   11660:	39cf883a 	add	r7,r7,r7
+    }
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   11664:	6bffc02c 	andhi	r15,r13,65280
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+   11668:	71cf883a 	add	r7,r14,r7
+    }
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   1166c:	63400003 	ldbu	r13,0(r12)
+   11670:	39c00017 	ldw	r7,0(r7)
+   11674:	33000017 	ldw	r12,0(r6)
+   11678:	7b5af03a 	xor	r13,r15,r13
+   1167c:	39c03fec 	andhi	r7,r7,255
+   11680:	6b18f03a 	xor	r12,r13,r12
+   11684:	61cef03a 	xor	r7,r12,r7
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+   11688:	db000817 	ldw	r12,32(sp)
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+   1168c:	5ad7883a 	add	r11,r11,r11
+   11690:	5ad7883a 	add	r11,r11,r11
+     * map cipher state to byte array block:
+     */
+    s0 =
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+   11694:	61003fcc 	andi	r4,r12,255
+   11698:	2109883a 	add	r4,r4,r4
+   1169c:	2109883a 	add	r4,r4,r4
+   116a0:	7109883a 	add	r4,r14,r4
+    }
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   116a4:	21000017 	ldw	r4,0(r4)
+    PUTU32(out     , s0);
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+   116a8:	5295883a 	add	r10,r10,r10
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+   116ac:	72d7883a 	add	r11,r14,r11
+    }
+    /*
+     * apply last round and
+     * map cipher state to byte array block:
+     */
+    s0 =
+   116b0:	213fc00c 	andi	r4,r4,65280
+   116b4:	3908f03a 	xor	r4,r7,r4
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   116b8:	200ed63a 	srli	r7,r4,24
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+   116bc:	5295883a 	add	r10,r10,r10
+   116c0:	7295883a 	add	r10,r14,r10
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   116c4:	29c00005 	stb	r7,0(r5)
+   116c8:	200ed43a 	srli	r7,r4,16
+   116cc:	290000c5 	stb	r4,3(r5)
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+   116d0:	4a53883a 	add	r9,r9,r9
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   116d4:	29c00045 	stb	r7,1(r5)
+   116d8:	200ed23a 	srli	r7,r4,8
+    s1 =
+   116dc:	51000003 	ldbu	r4,0(r10)
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+   116e0:	4a53883a 	add	r9,r9,r9
+	(Td4[(t0 >> 24)       ] & 0xff000000) ^
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+   116e4:	29c00085 	stb	r7,2(r5)
+    s1 =
+   116e8:	59c00017 	ldw	r7,0(r11)
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+   116ec:	4211883a 	add	r8,r8,r8
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+   116f0:	7253883a 	add	r9,r14,r9
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   116f4:	39ffc02c 	andhi	r7,r7,65280
+   116f8:	390ef03a 	xor	r7,r7,r4
+   116fc:	31000117 	ldw	r4,4(r6)
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+   11700:	4211883a 	add	r8,r8,r8
+   11704:	7211883a 	add	r8,r14,r8
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11708:	3914f03a 	xor	r10,r7,r4
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+   1170c:	d9c00417 	ldw	r7,16(sp)
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   11710:	dac00617 	ldw	r11,24(sp)
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+   11714:	db000717 	ldw	r12,28(sp)
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+   11718:	39003fcc 	andi	r4,r7,255
+   1171c:	2109883a 	add	r4,r4,r4
+   11720:	2109883a 	add	r4,r4,r4
+   11724:	7109883a 	add	r4,r14,r4
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11728:	21c00017 	ldw	r7,0(r4)
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+   1172c:	18c7883a 	add	r3,r3,r3
+   11730:	18c7883a 	add	r3,r3,r3
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11734:	39c03fec 	andhi	r7,r7,255
+   11738:	51cef03a 	xor	r7,r10,r7
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+   1173c:	da800517 	ldw	r10,20(sp)
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t0      ) & 0xff] & 0x000000ff) ^
+   11740:	1085883a 	add	r2,r2,r2
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+   11744:	70c7883a 	add	r3,r14,r3
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+   11748:	51003fcc 	andi	r4,r10,255
+   1174c:	2109883a 	add	r4,r4,r4
+   11750:	2109883a 	add	r4,r4,r4
+   11754:	7109883a 	add	r4,r14,r4
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11758:	21000017 	ldw	r4,0(r4)
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t0      ) & 0xff] & 0x000000ff) ^
+   1175c:	1085883a 	add	r2,r2,r2
+   11760:	7085883a 	add	r2,r14,r2
+	(Td4[(t3 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t2 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t1      ) & 0xff] & 0x000000ff) ^
+	rk[0];
+    PUTU32(out     , s0);
+    s1 =
+   11764:	213fc00c 	andi	r4,r4,65280
+   11768:	3908f03a 	xor	r4,r7,r4
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   1176c:	200ed63a 	srli	r7,r4,24
+   11770:	290001c5 	stb	r4,7(r5)
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+   11774:	94803fcc 	andi	r18,r18,255
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11778:	29c00105 	stb	r7,4(r5)
+   1177c:	200ed43a 	srli	r7,r4,16
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+   11780:	94a5883a 	add	r18,r18,r18
+   11784:	94a5883a 	add	r18,r18,r18
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11788:	29c00145 	stb	r7,5(r5)
+   1178c:	200ed23a 	srli	r7,r4,8
+    s2 =
+   11790:	41000003 	ldbu	r4,0(r8)
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+   11794:	74a5883a 	add	r18,r14,r18
+	(Td4[(t1 >> 24)       ] & 0xff000000) ^
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+   11798:	29c00185 	stb	r7,6(r5)
+    s2 =
+   1179c:	49c00017 	ldw	r7,0(r9)
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   117a0:	8c403fcc 	andi	r17,r17,255
+   117a4:	8c63883a 	add	r17,r17,r17
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   117a8:	39ffc02c 	andhi	r7,r7,65280
+   117ac:	390ef03a 	xor	r7,r7,r4
+   117b0:	31000217 	ldw	r4,8(r6)
+	rk[2];
+    PUTU32(out +  8, s2);
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   117b4:	8c63883a 	add	r17,r17,r17
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   117b8:	3910f03a 	xor	r8,r7,r4
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+   117bc:	59003fcc 	andi	r4,r11,255
+   117c0:	2109883a 	add	r4,r4,r4
+   117c4:	2109883a 	add	r4,r4,r4
+   117c8:	7109883a 	add	r4,r14,r4
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   117cc:	21c00017 	ldw	r7,0(r4)
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+   117d0:	61003fcc 	andi	r4,r12,255
+   117d4:	2109883a 	add	r4,r4,r4
+   117d8:	2109883a 	add	r4,r4,r4
+   117dc:	7109883a 	add	r4,r14,r4
+	(Td4[(t0 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t3 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t2      ) & 0xff] & 0x000000ff) ^
+	rk[1];
+    PUTU32(out +  4, s1);
+    s2 =
+   117e0:	21000017 	ldw	r4,0(r4)
+   117e4:	39c03fec 	andhi	r7,r7,255
+   117e8:	41cef03a 	xor	r7,r8,r7
+   117ec:	213fc00c 	andi	r4,r4,65280
+   117f0:	3908f03a 	xor	r4,r7,r4
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+   117f4:	200ed63a 	srli	r7,r4,24
+    s3 =
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+   117f8:	745d883a 	add	r14,r14,r17
+	(Td4[(t2 >> 24)       ] & 0xff000000) ^
+	(Td4[(t1 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t0 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t3      ) & 0xff] & 0x000000ff) ^
+	rk[2];
+    PUTU32(out +  8, s2);
+   117fc:	29c00205 	stb	r7,8(r5)
+   11800:	200ed43a 	srli	r7,r4,16
+   11804:	29c00245 	stb	r7,9(r5)
+   11808:	200ed23a 	srli	r7,r4,8
+   1180c:	29c00285 	stb	r7,10(r5)
+   11810:	290002c5 	stb	r4,11(r5)
+    s3 =
+   11814:	19000017 	ldw	r4,0(r3)
+   11818:	10c00003 	ldbu	r3,0(r2)
+   1181c:	213fc02c 	andhi	r4,r4,65280
+   11820:	20c4f03a 	xor	r2,r4,r3
+   11824:	31000317 	ldw	r4,12(r6)
+   11828:	90c00017 	ldw	r3,0(r18)
+   1182c:	1104f03a 	xor	r2,r2,r4
+   11830:	18c03fec 	andhi	r3,r3,255
+   11834:	10c6f03a 	xor	r3,r2,r3
+   11838:	70800017 	ldw	r2,0(r14)
+   1183c:	10bfc00c 	andi	r2,r2,65280
+   11840:	1884f03a 	xor	r2,r3,r2
+	(Td4[(t3 >> 24)       ] & 0xff000000) ^
+	(Td4[(t2 >> 16) & 0xff] & 0x00ff0000) ^
+	(Td4[(t1 >>  8) & 0xff] & 0x0000ff00) ^
+	(Td4[(t0      ) & 0xff] & 0x000000ff) ^
+	rk[3];
+    PUTU32(out + 12, s3);
+   11844:	1006d63a 	srli	r3,r2,24
+   11848:	288003c5 	stb	r2,15(r5)
+   1184c:	28c00305 	stb	r3,12(r5)
+   11850:	1006d43a 	srli	r3,r2,16
+   11854:	28c00345 	stb	r3,13(r5)
+   11858:	1006d23a 	srli	r3,r2,8
+   1185c:	28c00385 	stb	r3,14(r5)
+}
+   11860:	dfc01217 	ldw	ra,72(sp)
+   11864:	df001117 	ldw	fp,68(sp)
+   11868:	ddc01017 	ldw	r23,64(sp)
+   1186c:	dd800f17 	ldw	r22,60(sp)
+   11870:	dd400e17 	ldw	r21,56(sp)
+   11874:	dd000d17 	ldw	r20,52(sp)
+   11878:	dcc00c17 	ldw	r19,48(sp)
+   1187c:	dc800b17 	ldw	r18,44(sp)
+   11880:	dc400a17 	ldw	r17,40(sp)
+   11884:	dc000917 	ldw	r16,36(sp)
+   11888:	dec01304 	addi	sp,sp,76
+   1188c:	f800283a 	ret
+
+00011890 <AES_encrypt_CI>:
+  int r;
+
+  rk = key->rd_key;
+
+  s0 = GETU32(in     ) ^ rk[0];
+  s1 = GETU32(in +  4) ^ rk[1];
+   11890:	20800103 	ldbu	r2,4(r4)
+   11894:	31c00117 	ldw	r7,4(r6)
+  s2 = GETU32(in +  8) ^ rk[2];
+   11898:	32000217 	ldw	r8,8(r6)
+  int r;
+
+  rk = key->rd_key;
+
+  s0 = GETU32(in     ) ^ rk[0];
+  s1 = GETU32(in +  4) ^ rk[1];
+   1189c:	1006963a 	slli	r3,r2,24
+   118a0:	20800143 	ldbu	r2,5(r4)
+   118a4:	1004943a 	slli	r2,r2,16
+   118a8:	1884f03a 	xor	r2,r3,r2
+   118ac:	20c001c3 	ldbu	r3,7(r4)
+   118b0:	10c6f03a 	xor	r3,r2,r3
+   118b4:	20800183 	ldbu	r2,6(r4)
+   118b8:	1004923a 	slli	r2,r2,8
+   118bc:	1884f03a 	xor	r2,r3,r2
+   118c0:	11cef03a 	xor	r7,r2,r7
+  s2 = GETU32(in +  8) ^ rk[2];
+   118c4:	20800203 	ldbu	r2,8(r4)
+   118c8:	1006963a 	slli	r3,r2,24
+   118cc:	20800243 	ldbu	r2,9(r4)
+   118d0:	1004943a 	slli	r2,r2,16
+   118d4:	1884f03a 	xor	r2,r3,r2
+   118d8:	20c002c3 	ldbu	r3,11(r4)
+   118dc:	10c6f03a 	xor	r3,r2,r3
+   118e0:	20800283 	ldbu	r2,10(r4)
+   118e4:	1004923a 	slli	r2,r2,8
+   118e8:	1884f03a 	xor	r2,r3,r2
+   118ec:	1210f03a 	xor	r8,r2,r8
+  s3 = GETU32(in + 12) ^ rk[3];
+   118f0:	20800303 	ldbu	r2,12(r4)
+   118f4:	1006963a 	slli	r3,r2,24
+   118f8:	20800343 	ldbu	r2,13(r4)
+   118fc:	1004943a 	slli	r2,r2,16
+   11900:	1884f03a 	xor	r2,r3,r2
+   11904:	20c003c3 	ldbu	r3,15(r4)
+   11908:	10c6f03a 	xor	r3,r2,r3
+   1190c:	20800383 	ldbu	r2,14(r4)
+   11910:	1004923a 	slli	r2,r2,8
+   11914:	1884f03a 	xor	r2,r3,r2
+   11918:	30c00317 	ldw	r3,12(r6)
+   1191c:	10c6f03a 	xor	r3,r2,r3
+
+  ALT_CI_TBOXTOP_0(LOADINS, s0, 0);
+   11920:	20800003 	ldbu	r2,0(r4)
+   11924:	1012963a 	slli	r9,r2,24
+   11928:	20800043 	ldbu	r2,1(r4)
+   1192c:	1004943a 	slli	r2,r2,16
+   11930:	4884f03a 	xor	r2,r9,r2
+   11934:	224000c3 	ldbu	r9,3(r4)
+   11938:	1252f03a 	xor	r9,r2,r9
+   1193c:	20800083 	ldbu	r2,2(r4)
+   11940:	31000017 	ldw	r4,0(r6)
+   11944:	1004923a 	slli	r2,r2,8
+   11948:	4884f03a 	xor	r2,r9,r2
+   1194c:	1104f03a 	xor	r2,r2,r4
+   11950:	1005c072 	custom	1,r2,r2,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s1, 0);
+   11954:	3805c072 	custom	1,r2,r7,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s2, 0);
+   11958:	4005c072 	custom	1,r2,r8,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s3, 0);
+   1195c:	1805c072 	custom	1,r2,r3,zero
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+   11960:	30c00417 	ldw	r3,16(r6)
+   11964:	31000517 	ldw	r4,20(r6)
+  ALT_CI_TBOXTOP_0(LOADINS, s0, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s1, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s2, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s3, 0);
+
+  rk += 4;
+   11968:	30800404 	addi	r2,r6,16
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+   1196c:	1907c0f2 	custom	3,r3,r3,r4
+  ALT_CI_TBOXTOP_0(ENCINS, rk[2], rk[3]);
+   11970:	30c00617 	ldw	r3,24(r6)
+   11974:	31000717 	ldw	r4,28(r6)
+   11978:	1907c132 	custom	4,r3,r3,r4
+   1197c:	31c00904 	addi	r7,r6,36
+   11980:	31000a04 	addi	r4,r6,40
+   11984:	30c00b04 	addi	r3,r6,44
+   11988:	32402404 	addi	r9,r6,144
+
+  for (r=0; r<8; r++) {
+    rk += 4;
+   1198c:	10800404 	addi	r2,r2,16
+    ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+   11990:	12000017 	ldw	r8,0(r2)
+   11994:	3a800017 	ldw	r10,0(r7)
+   11998:	4291c0b2 	custom	2,r8,r8,r10
+    ALT_CI_TBOXTOP_0(ENCINS,     rk[2], rk[3]);
+   1199c:	22000017 	ldw	r8,0(r4)
+   119a0:	1a800017 	ldw	r10,0(r3)
+   119a4:	4291c132 	custom	4,r8,r8,r10
+   119a8:	39c00404 	addi	r7,r7,16
+   119ac:	21000404 	addi	r4,r4,16
+   119b0:	18c00404 	addi	r3,r3,16
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+  ALT_CI_TBOXTOP_0(ENCINS, rk[2], rk[3]);
+
+  for (r=0; r<8; r++) {
+   119b4:	127ff51e 	bne	r2,r9,1198c <__alt_data_end+0xffff198c>
+    ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+    ALT_CI_TBOXTOP_0(ENCINS,     rk[2], rk[3]);
+  }
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+   119b8:	30802817 	ldw	r2,160(r6)
+   119bc:	30c02917 	ldw	r3,164(r6)
+   119c0:	10c5c0b2 	custom	2,r2,r2,r3
+  ALT_CI_TBOXTOP_0(ENCLASTINS, rk[2], rk[3]);
+   119c4:	30802a17 	ldw	r2,168(r6)
+   119c8:	30c02b17 	ldw	r3,172(r6)
+   119cc:	10c5c1b2 	custom	6,r2,r2,r3
+
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+   119d0:	000dc0b2 	custom	2,r6,zero,zero
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   119d4:	0009c072 	custom	1,r4,zero,zero
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   119d8:	0007c072 	custom	1,r3,zero,zero
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   119dc:	0005c072 	custom	1,r2,zero,zero
+
+  PUTU32(out     , s0);
+   119e0:	300ed63a 	srli	r7,r6,24
+   119e4:	298000c5 	stb	r6,3(r5)
+  PUTU32(out +  4, s1);
+   119e8:	290001c5 	stb	r4,7(r5)
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   119ec:	29c00005 	stb	r7,0(r5)
+   119f0:	300ed43a 	srli	r7,r6,16
+  PUTU32(out +  4, s1);
+  PUTU32(out +  8, s2);
+   119f4:	28c002c5 	stb	r3,11(r5)
+  PUTU32(out + 12, s3);
+   119f8:	288003c5 	stb	r2,15(r5)
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   119fc:	29c00045 	stb	r7,1(r5)
+   11a00:	300ed23a 	srli	r7,r6,8
+  PUTU32(out +  4, s1);
+   11a04:	200cd63a 	srli	r6,r4,24
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   11a08:	29c00085 	stb	r7,2(r5)
+  PUTU32(out +  4, s1);
+   11a0c:	29800105 	stb	r6,4(r5)
+   11a10:	200cd43a 	srli	r6,r4,16
+   11a14:	29800145 	stb	r6,5(r5)
+   11a18:	200cd23a 	srli	r6,r4,8
+  PUTU32(out +  8, s2);
+   11a1c:	1808d63a 	srli	r4,r3,24
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+  PUTU32(out +  4, s1);
+   11a20:	29800185 	stb	r6,6(r5)
+  PUTU32(out +  8, s2);
+   11a24:	29000205 	stb	r4,8(r5)
+   11a28:	1808d43a 	srli	r4,r3,16
+   11a2c:	29000245 	stb	r4,9(r5)
+   11a30:	1808d23a 	srli	r4,r3,8
+  PUTU32(out + 12, s3);
+   11a34:	1006d63a 	srli	r3,r2,24
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+  PUTU32(out +  4, s1);
+  PUTU32(out +  8, s2);
+   11a38:	29000285 	stb	r4,10(r5)
+  PUTU32(out + 12, s3);
+   11a3c:	28c00305 	stb	r3,12(r5)
+   11a40:	1006d43a 	srli	r3,r2,16
+   11a44:	28c00345 	stb	r3,13(r5)
+   11a48:	1006d23a 	srli	r3,r2,8
+   11a4c:	28c00385 	stb	r3,14(r5)
+   11a50:	f800283a 	ret
+
+00011a54 <AES_decrypt_CI>:
+  int r;
+
+  rk = key->rd_key;
+
+  s0 = GETU32(in     ) ^ rk[0];
+  s1 = GETU32(in +  4) ^ rk[1];
+   11a54:	20800103 	ldbu	r2,4(r4)
+   11a58:	31c00117 	ldw	r7,4(r6)
+  s2 = GETU32(in +  8) ^ rk[2];
+   11a5c:	32000217 	ldw	r8,8(r6)
+  int r;
+
+  rk = key->rd_key;
+
+  s0 = GETU32(in     ) ^ rk[0];
+  s1 = GETU32(in +  4) ^ rk[1];
+   11a60:	1006963a 	slli	r3,r2,24
+   11a64:	20800143 	ldbu	r2,5(r4)
+   11a68:	1004943a 	slli	r2,r2,16
+   11a6c:	1884f03a 	xor	r2,r3,r2
+   11a70:	20c001c3 	ldbu	r3,7(r4)
+   11a74:	10c6f03a 	xor	r3,r2,r3
+   11a78:	20800183 	ldbu	r2,6(r4)
+   11a7c:	1004923a 	slli	r2,r2,8
+   11a80:	1884f03a 	xor	r2,r3,r2
+   11a84:	11cef03a 	xor	r7,r2,r7
+  s2 = GETU32(in +  8) ^ rk[2];
+   11a88:	20800203 	ldbu	r2,8(r4)
+   11a8c:	1006963a 	slli	r3,r2,24
+   11a90:	20800243 	ldbu	r2,9(r4)
+   11a94:	1004943a 	slli	r2,r2,16
+   11a98:	1884f03a 	xor	r2,r3,r2
+   11a9c:	20c002c3 	ldbu	r3,11(r4)
+   11aa0:	10c6f03a 	xor	r3,r2,r3
+   11aa4:	20800283 	ldbu	r2,10(r4)
+   11aa8:	1004923a 	slli	r2,r2,8
+   11aac:	1884f03a 	xor	r2,r3,r2
+   11ab0:	1210f03a 	xor	r8,r2,r8
+  s3 = GETU32(in + 12) ^ rk[3];
+   11ab4:	20800303 	ldbu	r2,12(r4)
+   11ab8:	1006963a 	slli	r3,r2,24
+   11abc:	20800343 	ldbu	r2,13(r4)
+   11ac0:	1004943a 	slli	r2,r2,16
+   11ac4:	1884f03a 	xor	r2,r3,r2
+   11ac8:	20c003c3 	ldbu	r3,15(r4)
+   11acc:	10c6f03a 	xor	r3,r2,r3
+   11ad0:	20800383 	ldbu	r2,14(r4)
+   11ad4:	1004923a 	slli	r2,r2,8
+   11ad8:	1884f03a 	xor	r2,r3,r2
+   11adc:	30c00317 	ldw	r3,12(r6)
+   11ae0:	10c6f03a 	xor	r3,r2,r3
+
+  ALT_CI_TBOXTOP_0(LOADINS, s0, 0);
+   11ae4:	20800003 	ldbu	r2,0(r4)
+   11ae8:	1012963a 	slli	r9,r2,24
+   11aec:	20800043 	ldbu	r2,1(r4)
+   11af0:	1004943a 	slli	r2,r2,16
+   11af4:	4884f03a 	xor	r2,r9,r2
+   11af8:	224000c3 	ldbu	r9,3(r4)
+   11afc:	1252f03a 	xor	r9,r2,r9
+   11b00:	20800083 	ldbu	r2,2(r4)
+   11b04:	31000017 	ldw	r4,0(r6)
+   11b08:	1004923a 	slli	r2,r2,8
+   11b0c:	4884f03a 	xor	r2,r9,r2
+   11b10:	1104f03a 	xor	r2,r2,r4
+   11b14:	1005c072 	custom	1,r2,r2,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s1, 0);
+   11b18:	3805c072 	custom	1,r2,r7,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s2, 0);
+   11b1c:	4005c072 	custom	1,r2,r8,zero
+  ALT_CI_TBOXTOP_0(LOADINS, s3, 0);
+   11b20:	1805c072 	custom	1,r2,r3,zero
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+   11b24:	30c00417 	ldw	r3,16(r6)
+   11b28:	31000517 	ldw	r4,20(r6)
+  ALT_CI_TBOXTOP_0(LOADINS, s0, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s1, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s2, 0);
+  ALT_CI_TBOXTOP_0(LOADINS, s3, 0);
+
+  rk += 4;
+   11b2c:	30800404 	addi	r2,r6,16
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+   11b30:	1907c0f2 	custom	3,r3,r3,r4
+  ALT_CI_TBOXTOP_0(DECINS, rk[2], rk[3]);
+   11b34:	30c00617 	ldw	r3,24(r6)
+   11b38:	31000717 	ldw	r4,28(r6)
+   11b3c:	1907c172 	custom	5,r3,r3,r4
+   11b40:	31c00904 	addi	r7,r6,36
+   11b44:	31000a04 	addi	r4,r6,40
+   11b48:	30c00b04 	addi	r3,r6,44
+   11b4c:	32402404 	addi	r9,r6,144
+
+  for (r=0; r<8; r++) {
+    rk += 4;
+   11b50:	10800404 	addi	r2,r2,16
+    ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+   11b54:	12000017 	ldw	r8,0(r2)
+   11b58:	3a800017 	ldw	r10,0(r7)
+   11b5c:	4291c0b2 	custom	2,r8,r8,r10
+    ALT_CI_TBOXTOP_0(DECINS,     rk[2], rk[3]);
+   11b60:	22000017 	ldw	r8,0(r4)
+   11b64:	1a800017 	ldw	r10,0(r3)
+   11b68:	4291c172 	custom	5,r8,r8,r10
+   11b6c:	39c00404 	addi	r7,r7,16
+   11b70:	21000404 	addi	r4,r4,16
+   11b74:	18c00404 	addi	r3,r3,16
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(RKINS,  rk[0], rk[1]);
+  ALT_CI_TBOXTOP_0(DECINS, rk[2], rk[3]);
+
+  for (r=0; r<8; r++) {
+   11b78:	127ff51e 	bne	r2,r9,11b50 <__alt_data_end+0xffff1b50>
+    ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+    ALT_CI_TBOXTOP_0(DECINS,     rk[2], rk[3]);
+  }
+
+  rk += 4;
+  ALT_CI_TBOXTOP_0(UPDATEINS,  rk[0], rk[1]);
+   11b7c:	30802817 	ldw	r2,160(r6)
+   11b80:	30c02917 	ldw	r3,164(r6)
+   11b84:	10c5c0b2 	custom	2,r2,r2,r3
+  ALT_CI_TBOXTOP_0(DECLASTINS, rk[2], rk[3]);
+   11b88:	30802a17 	ldw	r2,168(r6)
+   11b8c:	30c02b17 	ldw	r3,172(r6)
+   11b90:	10c5c1f2 	custom	7,r2,r2,r3
+
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+   11b94:	000dc0b2 	custom	2,r6,zero,zero
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   11b98:	0009c072 	custom	1,r4,zero,zero
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   11b9c:	0007c072 	custom	1,r3,zero,zero
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+   11ba0:	0005c072 	custom	1,r2,zero,zero
+
+  PUTU32(out     , s0);
+   11ba4:	300ed63a 	srli	r7,r6,24
+   11ba8:	298000c5 	stb	r6,3(r5)
+  PUTU32(out +  4, s1);
+   11bac:	290001c5 	stb	r4,7(r5)
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   11bb0:	29c00005 	stb	r7,0(r5)
+   11bb4:	300ed43a 	srli	r7,r6,16
+  PUTU32(out +  4, s1);
+  PUTU32(out +  8, s2);
+   11bb8:	28c002c5 	stb	r3,11(r5)
+  PUTU32(out + 12, s3);
+   11bbc:	288003c5 	stb	r2,15(r5)
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   11bc0:	29c00045 	stb	r7,1(r5)
+   11bc4:	300ed23a 	srli	r7,r6,8
+  PUTU32(out +  4, s1);
+   11bc8:	200cd63a 	srli	r6,r4,24
+  s0 = ALT_CI_TBOXTOP_0(UPDATEINS,  0,     0);
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+   11bcc:	29c00085 	stb	r7,2(r5)
+  PUTU32(out +  4, s1);
+   11bd0:	29800105 	stb	r6,4(r5)
+   11bd4:	200cd43a 	srli	r6,r4,16
+   11bd8:	29800145 	stb	r6,5(r5)
+   11bdc:	200cd23a 	srli	r6,r4,8
+  PUTU32(out +  8, s2);
+   11be0:	1808d63a 	srli	r4,r3,24
+  s1 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+  PUTU32(out +  4, s1);
+   11be4:	29800185 	stb	r6,6(r5)
+  PUTU32(out +  8, s2);
+   11be8:	29000205 	stb	r4,8(r5)
+   11bec:	1808d43a 	srli	r4,r3,16
+   11bf0:	29000245 	stb	r4,9(r5)
+   11bf4:	1808d23a 	srli	r4,r3,8
+  PUTU32(out + 12, s3);
+   11bf8:	1006d63a 	srli	r3,r2,24
+  s2 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+  s3 = ALT_CI_TBOXTOP_0(LOADINS,    0,     0);
+
+  PUTU32(out     , s0);
+  PUTU32(out +  4, s1);
+  PUTU32(out +  8, s2);
+   11bfc:	29000285 	stb	r4,10(r5)
+  PUTU32(out + 12, s3);
+   11c00:	28c00305 	stb	r3,12(r5)
+   11c04:	1006d43a 	srli	r3,r2,16
+   11c08:	28c00345 	stb	r3,13(r5)
+   11c0c:	1006d23a 	srli	r3,r2,8
+   11c10:	28c00385 	stb	r3,14(r5)
+   11c14:	f800283a 	ret
+
+00011c18 <mark>:
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11c18:	0005883a 	mov	r2,zero
+   11c1c:	11000035 	stwio	r4,0(r2)
+   11c20:	f800283a 	ret
+
+00011c24 <main>:
+}
+
+int main() {
+   11c24:	deffb404 	addi	sp,sp,-304
+   11c28:	dc404a15 	stw	r17,296(sp)
+  unsigned i;
+  unsigned t1;
+
+  typedef unsigned char u8;
+  u8 key[] = {0x00, 0x01, 0x02, 0x03,
+   11c2c:	01400074 	movhi	r5,1
+   11c30:	04400404 	movi	r17,16
+   11c34:	880d883a 	mov	r6,r17
+   11c38:	d9004504 	addi	r4,sp,276
+   11c3c:	2951a704 	addi	r5,r5,18076
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+}
+
+int main() {
+   11c40:	dfc04b15 	stw	ra,300(sp)
+   11c44:	dc004915 	stw	r16,292(sp)
+  unsigned i;
+  unsigned t1;
+
+  typedef unsigned char u8;
+  u8 key[] = {0x00, 0x01, 0x02, 0x03,
+   11c48:	0011cf40 	call	11cf4 <memcpy>
+      0x04, 0x05, 0x06, 0x07,
+      0x08, 0x09, 0x0A, 0x0B,
+      0x0C, 0x0D, 0x0E, 0x0F};
+
+  u8 txt[] = {0x00, 0x11, 0x22, 0x33,
+   11c4c:	01400074 	movhi	r5,1
+   11c50:	880d883a 	mov	r6,r17
+   11c54:	2951ab04 	addi	r5,r5,18092
+   11c58:	d9004104 	addi	r4,sp,260
+   11c5c:	0011cf40 	call	11cf4 <memcpy>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11c60:	0021883a 	mov	r16,zero
+   11c64:	00800044 	movi	r2,1
+   11c68:	80800035 	stwio	r2,0(r16)
+  u8 dout[16];
+
+  AES_KEY keyexp;
+
+  mark(0x01);
+  AES_set_encrypt_key(key, 128, &keyexp);
+   11c6c:	d80d883a 	mov	r6,sp
+   11c70:	01402004 	movi	r5,128
+   11c74:	d9004504 	addi	r4,sp,276
+   11c78:	001005c0 	call	1005c <AES_set_encrypt_key>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11c7c:	00800084 	movi	r2,2
+   11c80:	80800035 	stwio	r2,0(r16)
+
+  mark(0x01);
+  AES_set_encrypt_key(key, 128, &keyexp);
+
+  mark(0x02);
+  AES_encrypt(txt, dout, &keyexp);
+   11c84:	d80d883a 	mov	r6,sp
+   11c88:	d9403d04 	addi	r5,sp,244
+   11c8c:	d9004104 	addi	r4,sp,260
+   11c90:	0010a100 	call	10a10 <AES_encrypt>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11c94:	00800104 	movi	r2,4
+   11c98:	80800035 	stwio	r2,0(r16)
+
+  mark(0x02);
+  AES_encrypt(txt, dout, &keyexp);
+
+  mark(0x04);
+  AES_encrypt_CI(txt, dout, &keyexp);
+   11c9c:	d80d883a 	mov	r6,sp
+   11ca0:	d9403d04 	addi	r5,sp,244
+   11ca4:	d9004104 	addi	r4,sp,260
+   11ca8:	00118900 	call	11890 <AES_encrypt_CI>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11cac:	00800204 	movi	r2,8
+   11cb0:	80800035 	stwio	r2,0(r16)
+
+  mark(0x04);
+  AES_encrypt_CI(txt, dout, &keyexp);
+
+  mark(0x08);
+  AES_set_decrypt_key(key, 128, &keyexp);
+   11cb4:	d80d883a 	mov	r6,sp
+   11cb8:	01402004 	movi	r5,128
+   11cbc:	d9004504 	addi	r4,sp,276
+   11cc0:	00106880 	call	10688 <AES_set_decrypt_key>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11cc4:	84400035 	stwio	r17,0(r16)
+
+  mark(0x08);
+  AES_set_decrypt_key(key, 128, &keyexp);
+
+  mark(0x10);
+  AES_decrypt(dout, txt, &keyexp);
+   11cc8:	d80d883a 	mov	r6,sp
+   11ccc:	d9404104 	addi	r5,sp,260
+   11cd0:	d9003d04 	addi	r4,sp,244
+   11cd4:	00111500 	call	11150 <AES_decrypt>
+  PUTU32(out +  8, s2);
+  PUTU32(out + 12, s3);
+}
+
+void mark(u32 n) {
+	IOWR(PIO_0_BASE,0,n);
+   11cd8:	00800804 	movi	r2,32
+   11cdc:	80800035 	stwio	r2,0(r16)
+
+  mark(0x10);
+  AES_decrypt(dout, txt, &keyexp);
+
+  mark(0x20);
+  AES_decrypt_CI(dout, txt, &keyexp);
+   11ce0:	d80d883a 	mov	r6,sp
+   11ce4:	d9404104 	addi	r5,sp,260
+   11ce8:	d9003d04 	addi	r4,sp,244
+   11cec:	0011a540 	call	11a54 <AES_decrypt_CI>
+   11cf0:	003fff06 	br	11cf0 <__alt_data_end+0xffff1cf0>
+
+00011cf4 <memcpy>:
+   11cf4:	2005883a 	mov	r2,r4
+   11cf8:	2007883a 	mov	r3,r4
+   11cfc:	218d883a 	add	r6,r4,r6
+   11d00:	19800526 	beq	r3,r6,11d18 <memcpy+0x24>
+   11d04:	29000003 	ldbu	r4,0(r5)
+   11d08:	18c00044 	addi	r3,r3,1
+   11d0c:	29400044 	addi	r5,r5,1
+   11d10:	193fffc5 	stb	r4,-1(r3)
+   11d14:	003ffa06 	br	11d00 <__alt_data_end+0xffff1d00>
+   11d18:	f800283a 	ret
+
+00011d1c <alt_load>:
+ * there is no bootloader, so this application is responsible for loading to
+ * RAM any sections that are required.
+ */  
+
+void alt_load (void)
+{
+   11d1c:	deffff04 	addi	sp,sp,-4
+   11d20:	01000074 	movhi	r4,1
+   11d24:	01400074 	movhi	r5,1
+   11d28:	dfc00015 	stw	ra,0(sp)
+   11d2c:	2111af04 	addi	r4,r4,18108
+   11d30:	2951b004 	addi	r5,r5,18112
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+   11d34:	2140061e 	bne	r4,r5,11d50 <alt_load+0x34>
+   11d38:	01000074 	movhi	r4,1
+   11d3c:	01400074 	movhi	r5,1
+   11d40:	21000804 	addi	r4,r4,32
+   11d44:	29400804 	addi	r5,r5,32
+   11d48:	2140121e 	bne	r4,r5,11d94 <alt_load+0x78>
+   11d4c:	00000b06 	br	11d7c <alt_load+0x60>
+   11d50:	00c00074 	movhi	r3,1
+   11d54:	18d1b004 	addi	r3,r3,18112
+   11d58:	1907c83a 	sub	r3,r3,r4
+   11d5c:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+   11d60:	10fff526 	beq	r2,r3,11d38 <__alt_data_end+0xffff1d38>
+    {
+      *to++ = *from++;
+   11d64:	114f883a 	add	r7,r2,r5
+   11d68:	39c00017 	ldw	r7,0(r7)
+   11d6c:	110d883a 	add	r6,r2,r4
+   11d70:	10800104 	addi	r2,r2,4
+   11d74:	31c00015 	stw	r7,0(r6)
+   11d78:	003ff906 	br	11d60 <__alt_data_end+0xffff1d60>
+   11d7c:	01000074 	movhi	r4,1
+   11d80:	01400074 	movhi	r5,1
+   11d84:	21079d04 	addi	r4,r4,7796
+   11d88:	29479d04 	addi	r5,r5,7796
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+   11d8c:	2140101e 	bne	r4,r5,11dd0 <alt_load+0xb4>
+   11d90:	00000b06 	br	11dc0 <alt_load+0xa4>
+   11d94:	00c00074 	movhi	r3,1
+   11d98:	18c00804 	addi	r3,r3,32
+   11d9c:	1907c83a 	sub	r3,r3,r4
+   11da0:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+   11da4:	10fff526 	beq	r2,r3,11d7c <__alt_data_end+0xffff1d7c>
+    {
+      *to++ = *from++;
+   11da8:	114f883a 	add	r7,r2,r5
+   11dac:	39c00017 	ldw	r7,0(r7)
+   11db0:	110d883a 	add	r6,r2,r4
+   11db4:	10800104 	addi	r2,r2,4
+   11db8:	31c00015 	stw	r7,0(r6)
+   11dbc:	003ff906 	br	11da4 <__alt_data_end+0xffff1da4>
+  
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+   11dc0:	0011e640 	call	11e64 <alt_dcache_flush_all>
+  alt_icache_flush_all();
+}
+   11dc4:	dfc00017 	ldw	ra,0(sp)
+   11dc8:	dec00104 	addi	sp,sp,4
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+  alt_icache_flush_all();
+   11dcc:	0011e681 	jmpi	11e68 <alt_icache_flush_all>
+   11dd0:	00c00074 	movhi	r3,1
+   11dd4:	18d1af04 	addi	r3,r3,18108
+   11dd8:	1907c83a 	sub	r3,r3,r4
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+   11ddc:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+   11de0:	18bff726 	beq	r3,r2,11dc0 <__alt_data_end+0xffff1dc0>
+    {
+      *to++ = *from++;
+   11de4:	114f883a 	add	r7,r2,r5
+   11de8:	39c00017 	ldw	r7,0(r7)
+   11dec:	110d883a 	add	r6,r2,r4
+   11df0:	10800104 	addi	r2,r2,4
+   11df4:	31c00015 	stw	r7,0(r6)
+   11df8:	003ff906 	br	11de0 <__alt_data_end+0xffff1de0>
+
+00011dfc <alt_main>:
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+   11dfc:	deffff04 	addi	sp,sp,-4
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+   11e00:	0009883a 	mov	r4,zero
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+   11e04:	dfc00015 	stw	ra,0(sp)
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+   11e08:	0011e280 	call	11e28 <alt_irq_init>
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
+  ALT_SEM_CREATE (&alt_fd_list_lock, 1);
+
+  /* Initialize the device drivers/software components. */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
+  alt_sys_init();
+   11e0c:	0011e480 	call	11e48 <alt_sys_init>
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+   11e10:	d1a00217 	ldw	r6,-32760(gp)
+   11e14:	d1600317 	ldw	r5,-32756(gp)
+   11e18:	d1200417 	ldw	r4,-32752(gp)
+  close(STDOUT_FILENO);
+  exit (result);
+#endif
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
+}
+   11e1c:	dfc00017 	ldw	ra,0(sp)
+   11e20:	dec00104 	addi	sp,sp,4
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+   11e24:	0011c241 	jmpi	11c24 <main>
+
+00011e28 <alt_irq_init>:
+ * The "base" parameter is ignored and only
+ * present for backwards-compatibility.
+ */
+
+void alt_irq_init ( const void* base )
+{
+   11e28:	deffff04 	addi	sp,sp,-4
+   11e2c:	dfc00015 	stw	ra,0(sp)
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_GEN2_0, nios2_gen2_0);
+   11e30:	0011e6c0 	call	11e6c <altera_nios2_gen2_irq_init>
+ * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
+ */
+static ALT_INLINE void ALT_ALWAYS_INLINE 
+       alt_irq_cpu_enable_interrupts (void)
+{
+    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
+   11e34:	00800044 	movi	r2,1
+   11e38:	1001703a 	wrctl	status,r2
+    alt_irq_cpu_enable_interrupts();
+}
+   11e3c:	dfc00017 	ldw	ra,0(sp)
+   11e40:	dec00104 	addi	sp,sp,4
+   11e44:	f800283a 	ret
+
+00011e48 <alt_sys_init>:
+ * Called after alt_irq_init().
+ */
+
+void alt_sys_init( void )
+{
+    ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
+   11e48:	008000b4 	movhi	r2,2
+   11e4c:	10840804 	addi	r2,r2,4128
+   11e50:	d0a00615 	stw	r2,-32744(gp)
+   11e54:	0080bef4 	movhi	r2,763
+   11e58:	10bc2004 	addi	r2,r2,-3968
+   11e5c:	d0a00515 	stw	r2,-32748(gp)
+   11e60:	f800283a 	ret
+
+00011e64 <alt_dcache_flush_all>:
+/*
+ * alt_dcache_flush_all() is called to flush the entire data cache.
+ */
+
+void alt_dcache_flush_all (void)
+{
+   11e64:	f800283a 	ret
+
+00011e68 <alt_icache_flush_all>:
+/*
+ * alt_icache_flush_all() is called to flush the entire instruction cache.
+ */
+
+void alt_icache_flush_all (void)
+{
+   11e68:	f800283a 	ret
+
+00011e6c <altera_nios2_gen2_irq_init>:
+ * To initialize the internal interrupt controller, just clear the IENABLE
+ * register so that all possible IRQs are disabled.
+ */
+void altera_nios2_gen2_irq_init(void) 
+{
+    NIOS2_WRITE_IENABLE(0);
+   11e6c:	000170fa 	wrctl	ienable,zero
+   11e70:	f800283a 	ret

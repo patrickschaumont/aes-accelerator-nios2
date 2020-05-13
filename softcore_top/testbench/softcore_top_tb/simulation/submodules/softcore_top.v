@@ -4,8 +4,9 @@
 
 `timescale 1 ps / 1 ps
 module softcore_top (
-		input  wire  clk_clk,       //   clk.clk
-		input  wire  reset_reset_n  // reset.reset_n
+		input  wire       clk_clk,       //   clk.clk
+		output wire [7:0] pio_export,    //   pio.export
+		input  wire       reset_reset_n  // reset.reset_n
 	);
 
 	wire         nios2_gen2_0_custom_instruction_master_readra;                                   // nios2_gen2_0:D_ci_readra -> nios2_gen2_0_custom_instruction_master_translator:ci_slave_readra
@@ -108,10 +109,15 @@ module softcore_top (
 	wire   [2:0] mm_interconnect_0_timer_0_s1_address;                                            // mm_interconnect_0:timer_0_s1_address -> timer_0:address
 	wire         mm_interconnect_0_timer_0_s1_write;                                              // mm_interconnect_0:timer_0_s1_write -> timer_0:write_n
 	wire  [15:0] mm_interconnect_0_timer_0_s1_writedata;                                          // mm_interconnect_0:timer_0_s1_writedata -> timer_0:writedata
+	wire         mm_interconnect_0_pio_0_s1_chipselect;                                           // mm_interconnect_0:pio_0_s1_chipselect -> pio_0:chipselect
+	wire  [31:0] mm_interconnect_0_pio_0_s1_readdata;                                             // pio_0:readdata -> mm_interconnect_0:pio_0_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_0_s1_address;                                              // mm_interconnect_0:pio_0_s1_address -> pio_0:address
+	wire         mm_interconnect_0_pio_0_s1_write;                                                // mm_interconnect_0:pio_0_s1_write -> pio_0:write_n
+	wire  [31:0] mm_interconnect_0_pio_0_s1_writedata;                                            // mm_interconnect_0:pio_0_s1_writedata -> pio_0:writedata
 	wire         irq_mapper_receiver0_irq;                                                        // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                                        // timer_0:irq -> irq_mapper:receiver1_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                                            // irq_mapper:sender_irq -> nios2_gen2_0:irq
-	wire         rst_controller_reset_out_reset;                                                  // rst_controller:reset_out -> [irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset, timer_0:reset_n]
+	wire         rst_controller_reset_out_reset;                                                  // rst_controller:reset_out -> [irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, onchip_memory2_0:reset, pio_0:reset_n, rst_translator:in_reset, timer_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                              // rst_controller:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 
 	softcore_top_jtag_uart_0 jtag_uart_0 (
@@ -185,6 +191,17 @@ module softcore_top (
 		.reset      (rst_controller_reset_out_reset),                   // reset1.reset
 		.reset_req  (rst_controller_reset_out_reset_req),               //       .reset_req
 		.freeze     (1'b0)                                              // (terminated)
+	);
+
+	softcore_top_pio_0 pio_0 (
+		.clk        (clk_clk),                               //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_pio_0_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_pio_0_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_pio_0_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_pio_0_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_pio_0_s1_readdata),   //                    .readdata
+		.out_port   (pio_export)                             // external_connection.export
 	);
 
 	tboxtop tboxtop_0 (
@@ -390,6 +407,11 @@ module softcore_top (
 		.onchip_memory2_0_s1_byteenable                 (mm_interconnect_0_onchip_memory2_0_s1_byteenable),            //                                         .byteenable
 		.onchip_memory2_0_s1_chipselect                 (mm_interconnect_0_onchip_memory2_0_s1_chipselect),            //                                         .chipselect
 		.onchip_memory2_0_s1_clken                      (mm_interconnect_0_onchip_memory2_0_s1_clken),                 //                                         .clken
+		.pio_0_s1_address                               (mm_interconnect_0_pio_0_s1_address),                          //                                 pio_0_s1.address
+		.pio_0_s1_write                                 (mm_interconnect_0_pio_0_s1_write),                            //                                         .write
+		.pio_0_s1_readdata                              (mm_interconnect_0_pio_0_s1_readdata),                         //                                         .readdata
+		.pio_0_s1_writedata                             (mm_interconnect_0_pio_0_s1_writedata),                        //                                         .writedata
+		.pio_0_s1_chipselect                            (mm_interconnect_0_pio_0_s1_chipselect),                       //                                         .chipselect
 		.timer_0_s1_address                             (mm_interconnect_0_timer_0_s1_address),                        //                               timer_0_s1.address
 		.timer_0_s1_write                               (mm_interconnect_0_timer_0_s1_write),                          //                                         .write
 		.timer_0_s1_readdata                            (mm_interconnect_0_timer_0_s1_readdata),                       //                                         .readdata
