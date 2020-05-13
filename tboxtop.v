@@ -84,6 +84,16 @@ always @(posedge clk or posedge reset)
 if (reset) begin
 	state <= sdecode;
 	done  <= 0;
+	i0 <= 32'd0;
+	i1 <= 32'd0;
+	i2 <= 32'd0;
+	i3 <= 32'd0;
+	q0 <= 32'd0;
+	q1 <= 32'd0;
+	q2 <= 32'd0;
+	q3 <= 32'd0;
+	rk0 <= 32'd0;
+	rk1 <= 32'd0;
 end else begin
 	done <= 0;
 

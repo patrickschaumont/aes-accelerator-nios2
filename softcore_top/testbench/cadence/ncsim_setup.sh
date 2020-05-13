@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2020.05.12.09:08:10
+# ACDS 18.1 625 win32 2020.05.12.20:16:27
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,12 +106,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2020.05.12.09:08:10
+# ACDS 18.1 625 win32 2020.05.12.20:16:27
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="softcore_top_tb"
 QSYS_SIMDIR="./../"
-QUARTUS_INSTALL_DIR="C:/intelfpga/18.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0

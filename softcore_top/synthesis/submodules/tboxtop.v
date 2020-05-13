@@ -84,9 +84,21 @@ always @(posedge clk or posedge reset)
 if (reset) begin
 	state <= sdecode;
 	done  <= 0;
+	i0 <= 32'd0;
+	i1 <= 32'd0;
+	i2 <= 32'd0;
+	i3 <= 32'd0;
+	q0 <= 32'd0;
+	q1 <= 32'd0;
+	q2 <= 32'd0;
+	q3 <= 32'd0;
+	rk0 <= 32'd0;
+	rk1 <= 32'd0;
 end else begin
 	done <= 0;
+
 	case (state)
+
 		sdecode: 
 		begin
 			if (clk_en & (n == LOADINS) & start) 
@@ -103,186 +115,186 @@ end else begin
 				i1    <= q1;
 				i2    <= q2;
 				i3    <= q3;
-rk0   <= dataa;  // 1/4 round key
-rk1   <= datab;  // 1/4 round key
-done  <= 1;	     
-end 
-else if (clk_en & (n == RKINS) & start)
-begin
-rk0   <= dataa;  // 1/4 round key
-rk1   <= datab;  // 1/4 round key
-done  <= 1;	     
-end 
-else if (clk_en & (n == ENCINS) & start)
-begin
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senc1;
-end 
-else if  (clk_en & (n == DECINS) & start)
-begin
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdec1;
-end
-else if (clk_en & (n == ENCLASTINS) & start)
-begin
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senclast1;
-end 
-else if (clk_en & (n == DECLASTINS) & start)
-begin
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdeclast1;
-end 
-end
+				rk0   <= dataa;  // 1/4 round key
+				rk1   <= datab;  // 1/4 round key
+				done  <= 1;	     
+			end 
+			else if (clk_en & (n == RKINS) & start)
+			begin
+				rk0   <= dataa;  // 1/4 round key
+				rk1   <= datab;  // 1/4 round key
+				done  <= 1;	     
+			end 
+			else if (clk_en & (n == ENCINS) & start)
+			begin
+				i0    <= i1;
+				i1    <= i2;
+				i2    <= i3;
+				i3    <= i0;
+				state <= senc1;
+			end 
+			else if  (clk_en & (n == DECINS) & start)
+			begin
+				i0    <= i1;
+				i1    <= i2;
+				i2    <= i3;
+				i3    <= i0;
+				state <= sdec1;
+			end
+			else if (clk_en & (n == ENCLASTINS) & start)
+			begin
+				i0    <= i1;
+				i1    <= i2;
+				i2    <= i3;
+				i3    <= i0;
+				state <= senclast1;
+			end 
+			else if (clk_en & (n == DECLASTINS) & start)
+			begin
+				i0    <= i1;
+				i1    <= i2;
+				i2    <= i3;
+				i3    <= i0;
+				state <= sdeclast1;
+			end 
+		end
 
-senc1:
-begin
-	q0    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ rk0;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senc2;
-end
-senc2:
-begin
-	q1    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ rk1;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senc3;
-end
-senc3:
-begin
-	q2    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ dataa;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senc4;
-end
-senc4:
-begin
-	q3    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ datab;
-	done  <= 1;
-	state <= sdecode;
-end
+		senc1:
+		begin
+			q0    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ rk0;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senc2;
+		end
+		senc2:
+		begin
+			q1    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ rk1;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senc3;
+		end
+		senc3:
+		begin
+			q2    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ dataa;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senc4;
+		end
+		senc4:
+		begin
+			q3    <= e0_q ^ e1_q ^ e2_q ^ e3_q ^ datab;
+			done  <= 1;
+			state <= sdecode;
+		end
 
-senclast1:
-begin
-	q0    <= {e41_q, e42_q, e43_q, e44_q} ^ rk0;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senclast2;
-end
-senclast2:
-begin
-	q1    <= {e41_q, e42_q, e43_q, e44_q} ^ rk1;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senclast3;
-end
-senclast3:
-begin
-	q2    <= {e41_q, e42_q, e43_q, e44_q} ^ dataa;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= senclast4;
-end
-senclast4:
-begin
-	q3    <= {e41_q, e42_q, e43_q, e44_q} ^ datab;
-	done  <= 1;
-	state <= sdecode;
-end
+		senclast1:
+		begin
+			q0    <= {e41_q, e42_q, e43_q, e44_q} ^ rk0;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senclast2;
+		end
+		senclast2:
+		begin
+			q1    <= {e41_q, e42_q, e43_q, e44_q} ^ rk1;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senclast3;
+		end
+		senclast3:
+		begin
+			q2    <= {e41_q, e42_q, e43_q, e44_q} ^ dataa;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= senclast4;
+		end
+		senclast4:
+		begin
+			q3    <= {e41_q, e42_q, e43_q, e44_q} ^ datab;
+			done  <= 1;
+			state <= sdecode;
+		end
 
-sdec1:
-begin
-	q0    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ rk0;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdec2;
-end
-sdec2:
-begin
-	q1    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ rk1;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdec3;
-end
-sdec3:
-begin
-	q2    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ dataa;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdec4;
-end
-sdec4:
-begin
-	q3    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ datab;
-	state <= sdecode;
-	done  <= 1;
-end
+		sdec1:
+		begin
+			q0    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ rk0;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdec2;
+		end
+		sdec2:
+		begin
+			q1    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ rk1;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdec3;
+		end
+		sdec3:
+		begin
+			q2    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ dataa;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdec4;
+		end
+		sdec4:
+		begin
+			q3    <= d0_q ^ d1_q ^ d2_q ^ d3_q ^ datab;
+			state <= sdecode;
+			done  <= 1;
+		end
 
-sdeclast1:
-begin
-	q0    <= {d41_q, d42_q, d43_q, d44_q} ^ rk0;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdeclast2;
-end
-sdeclast2:
-begin
-	q1    <= {d41_q, d42_q, d43_q, d44_q} ^ rk1;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdeclast3;
-end
-sdeclast3:
-begin
-	q2    <= {d41_q, d42_q, d43_q, d44_q} ^ dataa;
-	i0    <= i1;
-	i1    <= i2;
-	i2    <= i3;
-	i3    <= i0;
-	state <= sdeclast4;
-end
-sdeclast4:
-begin
-	q3    <= {d41_q, d42_q, d43_q, d44_q} ^ datab;
-	state <= sdecode;
-	done  <= 1;
-end
-endcase
+		sdeclast1:
+		begin
+			q0    <= {d41_q, d42_q, d43_q, d44_q} ^ rk0;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdeclast2;
+		end
+		sdeclast2:
+		begin
+			q1    <= {d41_q, d42_q, d43_q, d44_q} ^ rk1;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdeclast3;
+		end
+		sdeclast3:
+		begin
+			q2    <= {d41_q, d42_q, d43_q, d44_q} ^ dataa;
+			i0    <= i1;
+			i1    <= i2;
+			i2    <= i3;
+			i3    <= i0;
+			state <= sdeclast4;
+		end
+		sdeclast4:
+		begin
+			q3    <= {d41_q, d42_q, d43_q, d44_q} ^ datab;
+			state <= sdecode;
+			done  <= 1;
+		end
+	endcase
 end // else: !if(rst)
 
 
