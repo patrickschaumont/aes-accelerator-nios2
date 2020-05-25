@@ -1,12 +1,12 @@
-# system info softcore_top_tb on 2020.05.12.21:55:07
+# system info softcore_top_tb on 2020.05.25.07:06:54
 system_info:
 name,value
 DEVICE,5CSEMA5F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1589334894
+GENERATION_ID,1590404800
 #
 #
-# Files generated for softcore_top_tb on 2020.05.12.21:55:07
+# Files generated for softcore_top_tb on 2020.05.25.07:06:54
 files:
 filepath,kind,attributes,module,is_top
 softcore_top/testbench/softcore_top_tb/simulation/softcore_top_tb.v,VERILOG,,softcore_top_tb,true

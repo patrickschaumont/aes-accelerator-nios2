@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="softcore_top" kind="softcore_top" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.05.12.21:58:38 -->
+ <!-- 2020.05.25.07:06:36 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1589335118</value>
+  <value>1590404796</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>

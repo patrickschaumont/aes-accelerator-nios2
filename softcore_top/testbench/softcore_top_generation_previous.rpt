@@ -11,6 +11,8 @@ Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_gen2_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
 Progress: Adding tboxtop_0 [tboxtop 1.0]
 Progress: Parameterizing module tboxtop_0
 Progress: Adding timer_0 [altera_avalon_timer 18.1]
@@ -35,12 +37,12 @@ Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/i
 Info: Reading index C:\cygwin64\home\pschaumont\aes-accelerator-nios2\softcore_top\testbench\softcore_top.ipx
 Progress: Loading aes-accelerator-nios2/softcore_top.qsys
 Progress: Loading aes-accelerator-nios2/tboxtop_hw.tcl
-Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/* matched 29 files in 0.02 seconds
+Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/* matched 44 files in 0.02 seconds
 Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/ip/**/* matched 0 files in 0.00 seconds
-Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/*/* matched 34 files in 0.00 seconds
-Info: C:\cygwin64\home\pschaumont\aes-accelerator-nios2\softcore_top\testbench\softcore_top.ipx described 0 plugins, 3 paths, in 0.03 seconds
+Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/*/* matched 387 files in 0.01 seconds
+Info: C:\cygwin64\home\pschaumont\aes-accelerator-nios2\softcore_top\testbench\softcore_top.ipx described 0 plugins, 3 paths, in 0.04 seconds
 Progress: Loading testbench/softcore_top_tb.qsys
-Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/* matched 12 files in 0.03 seconds
+Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/* matched 12 files in 0.04 seconds
 Info: C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/*/* matched 9 files in 0.00 seconds
 Info: R:/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
@@ -48,7 +50,7 @@ Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* mat
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
 Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.13 seconds
-Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.13 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.14 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
 Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
@@ -57,8 +59,8 @@ Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\in
 Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
 Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.19 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.19 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.20 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.20 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -73,6 +75,9 @@ Info: get_connections
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property pio EXPORT_OF
+Info: get_instance_property pio_0 CLASS_NAME
+Info: get_instance_assignment pio_0 testbench.partner.map.external_connection
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
@@ -83,6 +88,7 @@ Info: add_instance softcore_top_inst softcore_top
 Info: set_use_testbench_naming_pattern true softcore_top
 Info: get_instance_interfaces softcore_top_inst
 Info: get_instance_interface_property softcore_top_inst clk CLASS_NAME
+Info: get_instance_interface_property softcore_top_inst pio CLASS_NAME
 Info: get_instance_interface_property softcore_top_inst reset CLASS_NAME
 Info: get_instance_interface_property softcore_top_inst clk CLASS_NAME
 Info: send_message Info TB_Gen: clock_sink found: clk
@@ -153,6 +159,7 @@ Info: softcore_top_tb.softcore_top_inst_reset_bfm: Elaborate: altera_reset_sourc
 Info: softcore_top_tb.softcore_top_inst_reset_bfm:            $Revision: #1 $
 Info: softcore_top_tb.softcore_top_inst_reset_bfm:            $Date: 2018/07/18 $
 Info: softcore_top_tb.softcore_top_inst_reset_bfm: Reset is negatively asserted.
+Warning: softcore_top_tb.softcore_top_inst: softcore_top_inst.pio must be exported, or connected to a matching conduit.
 Info: softcore_top_tb: Generating softcore_top_tb "softcore_top_tb" for SIM_VERILOG
 Warning: softcore_top_inst: "No matching role found for nios2_gen2_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
 Warning: softcore_top_inst: "No matching role found for nios2_gen2_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
@@ -161,17 +168,21 @@ Info: softcore_top_inst_clk_bfm: "softcore_top_tb" instantiated altera_avalon_cl
 Info: softcore_top_inst_reset_bfm: "softcore_top_tb" instantiated altera_avalon_reset_source "softcore_top_inst_reset_bfm"
 Info: Reusing file C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/verbosity_pkg.sv
 Info: jtag_uart_0: Starting RTL generation for module 'softcore_top_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=softcore_top_jtag_uart_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0004_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0004_jtag_uart_0_gen//softcore_top_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0004_jtag_uart_0_gen/  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=softcore_top_jtag_uart_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0004_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0004_jtag_uart_0_gen//softcore_top_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0004_jtag_uart_0_gen/  ]
 Info: jtag_uart_0: Done RTL generation for module 'softcore_top_jtag_uart_0'
 Info: jtag_uart_0: "softcore_top_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "softcore_top_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'softcore_top_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=softcore_top_onchip_memory2_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0005_onchip_memory2_0_gen//softcore_top_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0005_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=softcore_top_onchip_memory2_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0005_onchip_memory2_0_gen//softcore_top_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0005_onchip_memory2_0_gen/  ]
 Info: onchip_memory2_0: Done RTL generation for module 'softcore_top_onchip_memory2_0'
 Info: onchip_memory2_0: "softcore_top_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_0: Starting RTL generation for module 'softcore_top_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=softcore_top_pio_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0006_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0006_pio_0_gen//softcore_top_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0006_pio_0_gen/  ]
+Info: pio_0: Done RTL generation for module 'softcore_top_pio_0'
+Info: pio_0: "softcore_top_inst" instantiated altera_avalon_pio "pio_0"
 Info: tboxtop_0: "softcore_top_inst" instantiated tboxtop "tboxtop_0"
 Info: timer_0: Starting RTL generation for module 'softcore_top_timer_0'
-Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=softcore_top_timer_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0007_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0007_timer_0_gen//softcore_top_timer_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0007_timer_0_gen/  ]
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=softcore_top_timer_0 --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0008_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0008_timer_0_gen//softcore_top_timer_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0008_timer_0_gen/  ]
 Info: timer_0: Done RTL generation for module 'softcore_top_timer_0'
 Info: timer_0: "softcore_top_inst" instantiated altera_avalon_timer "timer_0"
 Info: nios2_gen2_0_custom_instruction_master_translator: "softcore_top_inst" instantiated altera_customins_master_translator "nios2_gen2_0_custom_instruction_master_translator"
@@ -181,21 +192,22 @@ Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "softcore_top_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "softcore_top_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "softcore_top_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'softcore_top_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=softcore_top_nios2_gen2_0_cpu --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0013_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0013_cpu_gen//softcore_top_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0013_cpu_gen/  ]
-Info: cpu: # 2020.05.12 21:05:00 (*) Starting Nios II generation
-Info: cpu: # 2020.05.12 21:05:00 (*)   Checking for plaintext license.
-Info: cpu: # 2020.05.12 21:05:00 (*)   Plaintext license not found.
-Info: cpu: # 2020.05.12 21:05:00 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2020.05.12 21:05:00 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.05.12 21:05:00 (*)   Creating all objects for CPU
-Info: cpu: # 2020.05.12 21:05:01 (*)   Creating 'C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_9091089250169450222.dir/0013_cpu_gen//softcore_top_nios2_gen2_0_cpu_nios2_waves.do'
-Info: cpu: # 2020.05.12 21:05:01 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.05.12 21:05:01 (*)   Creating plain-text RTL
-Info: cpu: # 2020.05.12 21:05:02 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=softcore_top_nios2_gen2_0_cpu --dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0014_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0014_cpu_gen//softcore_top_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0014_cpu_gen/  ]
+Info: cpu: # 2020.05.12 21:55:05 (*) Starting Nios II generation
+Info: cpu: # 2020.05.12 21:55:05 (*)   Checking for plaintext license.
+Info: cpu: # 2020.05.12 21:55:05 (*)   Plaintext license not found.
+Info: cpu: # 2020.05.12 21:55:05 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.05.12 21:55:05 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.05.12 21:55:05 (*)   Creating all objects for CPU
+Info: cpu: # 2020.05.12 21:55:06 (*)   Creating 'C:/Users/PSCHAU~1/AppData/Local/Temp/alt8395_6172607328173075451.dir/0014_cpu_gen//softcore_top_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2020.05.12 21:55:06 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.05.12 21:55:06 (*)   Creating plain-text RTL
+Info: cpu: # 2020.05.12 21:55:07 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'softcore_top_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -204,15 +216,23 @@ Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_me
 Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
 Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
 Info: Reusing file C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/softcore_top_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: softcore_top_tb: Done "softcore_top_tb" with 29 modules, 60 files
+Info: softcore_top_tb: Done "softcore_top_tb" with 36 modules, 67 files
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd=C:\cygwin64\home\pschaumont\aes-accelerator-nios2\softcore_top_tb.spd --output-directory=C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/ --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=C:\cygwin64\home\pschaumont\aes-accelerator-nios2\softcore_top_tb.spd --output-directory=C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/ --use-relative-paths=true
@@ -227,7 +247,7 @@ Info: Generating the following file(s) for NCSIM simulator in C:/cygwin64/home/p
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	29 .cds.lib files in cadence/cds_libs/ directory
+Info: 	36 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/cygwin64/home/pschaumont/aes-accelerator-nios2/softcore_top/testbench/.
